@@ -150,3 +150,4 @@ The frontend implements the **Academic Precision** UI specification:
   - `Border Neutral`: `#e2e8f0`
 - **State Badges:** Color-coded badges for statuses (`NEW`: Amber, `TRIAGED`: Blue, `IN_PROGRESS`: Indigo, `RESOLVED`: Emerald, `CLOSED`: Slate).
 - **Non-Punitive Attribution Disclaimer (RULE-010):** Embedded persistently across all rework dashboards and attribution matrices to prevent punitive misuse of operational data.
+

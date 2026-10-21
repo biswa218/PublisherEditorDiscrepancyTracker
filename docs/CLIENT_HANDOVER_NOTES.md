@@ -65,3 +65,4 @@ The system automatically initializes the database with key test user personas:
    - For deployments expecting tens of thousands of PDF galley attachments, implement an S3 / Azure Blob adapter for the `/uploads` route.
 4. **Continuous Deployment (CD):**
    - Wire the provided Docker build and Playwright test jobs into your internal GitLab CI or Azure DevOps pipelines.
+

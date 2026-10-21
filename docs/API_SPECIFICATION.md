@@ -187,3 +187,4 @@
 | `POST` | `/api/v1/journals` | Registers a new journal |
 | `GET` | `/api/v1/admin/audit-trail` | Paginated immutable operational audit ledger |
 | `GET` | `/api/v1/users` | Lists system users and editorial personnel |
+
