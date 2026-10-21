@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-primary-container":"#87a0cd","tertiary-fixed":"#ffdcc3","secondary-fixed":"#b5ebff","surface-tint":"#465f88","surface-container-lowest":"#ffffff","on-surface-variant":"#44474e","on-tertiary-fixed-variant":"#6e3900","on-secondary-container":"#00647b","tertiary":"#361900","surface-container-high":"#d8eaff","secondary-fixed-dim":"#7ed2ef","tertiary-container":"#552b00","inverse-primary":"#aec7f7","secondary-container":"#8ce0fd","primary":"#002046","tertiary-fixed-dim":"#ffb77d","on-secondary-fixed":"#001f28","on-primary":"#ffffff","on-secondary":"#ffffff","on-primary-fixed-variant":"#2e476f","on-tertiary":"#ffffff","surface-variant":"#cfe5fd","background":"#f7f9ff","on-primary-fixed":"#001b3d","on-background":"#061d2f","on-error":"#ffffff","on-tertiary-container":"#eb851c","surface":"#f7f9ff","on-error-container":"#93000a","surface-container":"#e3efff","inverse-on-surface":"#e8f2ff","outline-variant":"#c4c6cf","error-container":"#ffdad6","primary-fixed":"#d6e3ff","surface-bright":"#f7f9ff","primary-fixed-dim":"#aec7f7","surface-dim":"#c7dcf4","outline":"#74777f","surface-container-highest":"#cfe5fd","primary-container":"#1b365d","on-tertiary-fixed":"#2f1500","on-surface":"#061d2f","inverse-surface":"#1d3245","surface-container-low":"#edf4ff","error":"#ba1a1a","secondary":"#00677e","on-secondary-fixed-variant":"#004e60"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-xl":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem","gutter":"1rem","margin":"1rem","space-md":"0.75rem","space-lg":"1rem","gutter-lg":"1.5rem","margin-lg":"2rem","margin-md":"1.5rem"},"fontFamily":{"label-lg":["Inter"],"headline-sm":["Inter"],"label-sm":["Inter"],"body-md":["\"Source Sans 3\""],"body-sm":["\"Source Sans 3\""],"display-lg":["Inter"],"code-sm":["JetBrains Mono"],"headline-lg-mobile":["Inter"],"body-lg":["\"Source Sans 3\""],"headline-md":["Inter"],"headline-lg":["Inter"],"label-md":["Inter"]},"fontSize":{"label-lg":["14px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"600"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"code-sm":["11px",{"lineHeight":"16px","fontWeight":"500"}],"headline-lg-mobile":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-md":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface min-h-screen selection:bg-secondary-container selection:text-on-secondary-container"><header class="fixed top-0 left-0 right-0 h-16 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50"><div class="w-full h-16 px-gutter-lg flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md shrink-0"><img alt="Taylor &amp; Francis Tracker Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UpD-23D_mgy0CPURUmO4aZuI4T_I0HlUxfw_O5fRg2WaPNzu6e6fnsYsp6vlNM4LVsuhcoe-jxzO1KFzewDAD-QljGu-EP2UUpoCJPZ_IelziZ0REIUHWN_bLWb3AH9PVDOgzI_iA_3bSAM3xFaSd-R-EwLejyiJOPzSYbexCUOXFzL-U5ZDreKq7m5YCpe7Gh77707KejevvXvyHtvHwUaDJsdNetKBv1jgZ8iu7LQ35bvgblXY6G3_g5"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">Taylor &amp; Francis</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Discrepancy Tracker</span></div><div class="h-6 w-px bg-outline-variant mx-space-xs hidden sm:block"></div><div class="hidden lg:flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded text-on-surface-variant cursor-pointer hover:bg-surface-container hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-sm">menu_book</span><span class="font-label-md text-label-md">All Active Journals (142)</span><span class="material-symbols-outlined text-xs">arrow_drop_down</span></div><div class="hidden xl:flex items-center gap-space-xs bg-surface-container px-space-xs py-0.5 rounded font-code-sm text-code-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span>SQLite Production v1.2</span></div></div><div class="flex-1 max-w-md mx-gutter hidden md:block"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-3 text-outline text-base">search</span><input class="w-full h-8 pl-9 pr-3 bg-surface-container-lowest text-on-surface font-body-sm text-body-sm rounded border border-outline-variant placeholder:text-outline focus:outline-none focus:border-secondary" placeholder="Search Discrepancy ID, Manuscript Ref, DOI..." type="text"/></div></div><div class="flex items-center gap-space-md shrink-0"><button class="inline-flex items-center gap-space-xs bg-primary text-on-primary hover:bg-primary-container px-space-sm py-1.5 rounded font-label-md text-label-md transition-colors shadow-sm" type="button"><span class="material-symbols-outlined text-sm">add</span><span>Log Discrepancy</span></button><div class="relative cursor-pointer p-1 rounded hover:bg-surface-container-high transition-colors text-on-surface-variant"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-0 right-0 w-4 h-4 bg-error text-on-error font-label-sm text-label-sm rounded-full flex items-center justify-center font-bold">4</span></div><div class="h-6 w-px bg-outline-variant"></div><div class="flex items-center gap-space-sm cursor-pointer hover:bg-surface-container px-space-xs py-1 rounded transition-colors"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgZtJ3RB5fAKCbBO8OqISBg6VX4FKMgpBlPXNEWt279xqffyQBOOveGrmKlu74KsXC7aVvhTfmpqLSPPDl0aFYOzF-snaD5y921G24fY09NJb9DWjEE7fpRPNWv0pWIAJ2KmyWfIz4jQKIIB7JZgjCizvc5LbQ5CDsA1s0_2jB0uJB0KL3NpZ4YlGdvo6bSQGKKnhbHPEGdU7AusunrfRwI2pxDiNolj8k1HsBOJmB737Ue5aoqbuHRg"/><div class="hidden xl:flex flex-col text-left leading-tight"><span class="font-label-md text-label-md text-on-surface font-semibold">Dr. Eleanor Vance</span><span class="font-label-sm text-label-sm text-on-surface-variant">Editorial Ops Director</span></div><span class="material-symbols-outlined text-outline text-sm hidden xl:block">expand_more</span></div></div></div></header><aside class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-64 bg-surface-container-lowest border-r border-outline-variant z-40 flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-lg"><div class="px-space-md"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Editorial Operations</span></div><nav class="flex flex-col gap-1 px-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-sm"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="executive-dashboard" href="#"><span class="material-symbols-outlined text-lg">dashboard</span><span>Executive Dashboard</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 rounded transition-colors bg-primary-container text-on-primary-container font-semibold shadow-sm" data-path="discrepancy-register" href="#"><span class="material-symbols-outlined text-lg">checklist_rtl</span><span>Discrepancy Register</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="discrepancy-detail-workflow" href="#"><span class="material-symbols-outlined text-lg">rule_settings</span><span>Detail &amp; Workflow</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="rework-analytics" href="#"><span class="material-symbols-outlined text-lg">query_stats</span><span>Rework &amp; Analytics</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="admin-taxonomy" href="#"><span class="material-symbols-outlined text-lg">tune</span><span>Admin &amp; Taxonomy</span></a></nav></div><div class="px-space-md py-space-sm border-t border-outline-variant"><div class="flex items-center justify-between text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-sm text-secondary">lock_clock</span><span class="font-label-sm text-label-sm uppercase">Sync Cycle: 4m ago</span></div><span class="font-code-sm text-code-sm text-outline">DB OK</span></div></div></aside><div class="pl-64"><main class="pt-16 min-h-screen bg-surface"><div class="bg-surface-container-low border-b border-outline-variant px-gutter-lg py-space-xs"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><span class="cursor-pointer hover:text-on-surface transition-colors">Editorial Operations</span><span class="material-symbols-outlined text-xs">chevron_right</span><span class="text-on-surface font-semibold">Taylor &amp; Francis Global Tracker</span></div><div class="flex items-center gap-space-sm"><span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>Real-time Telemetry Active</span></div></div></div><div class="w-full px-gutter-lg py-space-lg"><div class="flex flex-col w-full gap-space-lg">
+<!-- Header Action Ribbon -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm">
+<h1 class="font-display-lg text-display-lg text-primary tracking-tight">Discrepancy Register</h1>
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-code-sm text-code-sm font-semibold">FRD Sec 5.1 &amp; 5.7</span>
+</div>
+<div class="flex items-center gap-space-sm mt-0.5">
+<span class="font-label-md text-label-md text-on-surface-variant">Central Operational Ledger</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-md text-label-md text-secondary font-semibold" id="totalRecordsCount">Showing 348 records</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-code-sm text-code-sm text-outline">Schema ver 2.4 | Read-Committed</span>
+</div>
+</div>
+<!-- Quick Action Toolset -->
+<div class="flex items-center flex-wrap gap-space-sm">
+<div class="inline-flex bg-surface-container rounded p-0.5 shadow-sm">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-bright transition-all shadow-sm" id="btnExportCsv">
+<span class="material-symbols-outlined text-sm text-secondary">csv</span>
+<span>Export CSV</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded text-on-surface-variant font-label-md text-label-md hover:text-on-surface hover:bg-surface-container-lowest transition-all" id="btnExportXlsx">
+<span class="material-symbols-outlined text-sm text-secondary">table_view</span>
+<span>Export XLSX</span>
+</button>
+</div>
+<div class="h-6 w-px bg-outline-variant hidden sm:block"></div>
+<button class="inline-flex items-center gap-2 bg-primary text-on-primary hover:bg-primary-container px-4 py-2 rounded font-label-lg text-label-lg transition-all shadow-md active:scale-95" id="btnOpenQuickLog">
+<span class="material-symbols-outlined text-base">add_circle</span>
+<span>+ Log New Discrepancy</span>
+</button>
+</div>
+</div>
+<!-- Operational Filter Hub & Search Workspace -->
+<div class="flex flex-col gap-space-md bg-surface-container-lowest p-space-md rounded shadow-sm">
+<!-- Primary Search & Multi-Facet Selectors -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-sm">
+<!-- Omni Search Field -->
+<div class="md:col-span-12 lg:col-span-4 relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline text-base">manage_search</span>
+<input class="w-full h-9 pl-9 pr-8 bg-surface-container-low text-on-surface font-body-md text-body-md rounded placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest transition-colors" id="tableSearchInput" placeholder="Search Discrepancy ID, Manuscript Ref, Title or Keyword..." type="text"/>
+<button class="absolute right-2 text-outline hover:text-on-surface hidden" id="clearSearchBtn">
+<span class="material-symbols-outlined text-xs">close</span>
+</button>
+</div>
+<!-- Facet: Journal -->
+<div class="md:col-span-4 lg:col-span-2">
+<div class="relative">
+<select class="w-full h-9 px-2.5 bg-surface-container-low text-on-surface font-label-md text-label-md rounded appearance-none cursor-pointer focus:outline-none" id="filterJournal">
+<option value="ALL">Journal: All (142)</option>
+<option value="JAB">JAB - Applied Bioscience</option>
+<option value="IMR">IMR - Intl Medical Review</option>
+<option value="JMC">JMC - Materials Chemistry</option>
+<option value="QPR">QPR - Quantum Physics</option>
+<option value="TSE">TSE - Social Epistemology</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2 text-outline pointer-events-none text-base">expand_more</span>
+</div>
+</div>
+<!-- Facet: Defect Category -->
+<div class="md:col-span-4 lg:col-span-2">
+<div class="relative">
+<select class="w-full h-9 px-2.5 bg-surface-container-low text-on-surface font-label-md text-label-md rounded appearance-none cursor-pointer focus:outline-none" id="filterCategory">
+<option value="ALL">Category: All Defect Types</option>
+<option value="METADATA">Manuscript Metadata</option>
+<option value="WORKFLOW">Workflow Transition</option>
+<option value="PEER_REVIEW">Peer Review Integrity</option>
+<option value="PRODUCTION">Typeset &amp; MathParity</option>
+<option value="CROSSREF">CrossRef DOI Integrity</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2 text-outline pointer-events-none text-base">expand_more</span>
+</div>
+</div>
+<!-- Facet: Status -->
+<div class="md:col-span-4 lg:col-span-2">
+<div class="relative">
+<select class="w-full h-9 px-2.5 bg-surface-container-low text-on-surface font-label-md text-label-md rounded appearance-none cursor-pointer focus:outline-none" id="filterStatus">
+<option value="ALL">Status: All Lifecycles</option>
+<option value="NEW">New (Logged)</option>
+<option value="TRIAGED">Triaged</option>
+<option value="ASSIGNED">Assigned</option>
+<option value="IN_PROGRESS">In Progress</option>
+<option value="RESOLVED">Resolved</option>
+<option value="VERIFIED">Verified</option>
+<option value="CLOSED">Closed</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2 text-outline pointer-events-none text-base">expand_more</span>
+</div>
+</div>
+<!-- Facet: Severity & Priority Group -->
+<div class="md:col-span-6 lg:col-span-1">
+<div class="relative">
+<select class="w-full h-9 px-2 bg-surface-container-low text-on-surface font-label-md text-label-md rounded appearance-none cursor-pointer focus:outline-none" id="filterSeverity">
+<option value="ALL">Severity</option>
+<option value="CRITICAL">Critical</option>
+<option value="HIGH">High</option>
+<option value="MEDIUM">Medium</option>
+<option value="LOW">Low</option>
+</select>
+<span class="material-symbols-outlined absolute right-1.5 top-2 text-outline pointer-events-none text-base">expand_more</span>
+</div>
+</div>
+<!-- Facet: Assigned Role -->
+<div class="md:col-span-6 lg:col-span-1">
+<div class="relative">
+<select class="w-full h-9 px-2 bg-surface-container-low text-on-surface font-label-md text-label-md rounded appearance-none cursor-pointer focus:outline-none" id="filterRole">
+<option value="ALL">Role</option>
+<option value="INTEGRITY">Integrity Team</option>
+<option value="EDITOR">Lead Editor</option>
+<option value="TYPESET">Production Typographer</option>
+<option value="VENDOR">Composition Vendor</option>
+</select>
+<span class="material-symbols-outlined absolute right-1.5 top-2 text-outline pointer-events-none text-base">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Quick Navigation Filter Tabs (FR-036) -->
+<div class="flex items-center justify-between border-t-0 pt-1 overflow-x-auto">
+<div class="flex items-center gap-space-xs shrink-0" id="quickFilterPills">
+<button class="quick-pill active px-3 py-1.5 rounded font-label-md text-label-md bg-primary-container text-on-primary font-semibold shadow-sm transition-colors" data-filter="ALL">
+          All (348)
+        </button>
+<button class="quick-pill px-3 py-1.5 rounded font-label-md text-label-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors" data-filter="TRIAGE">
+          Needs Triage <span class="ml-1 px-1.5 py-0.2 bg-error text-on-error rounded-full text-label-sm font-bold">22</span>
+</button>
+<button class="quick-pill px-3 py-1.5 rounded font-label-md text-label-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors" data-filter="ME">
+          Assigned to Me <span class="ml-1 px-1.5 py-0.2 bg-secondary text-on-secondary rounded-full text-label-sm">8</span>
+</button>
+<button class="quick-pill px-3 py-1.5 rounded font-label-md text-label-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors" data-filter="HIGH_REWORK">
+          High Rework (&gt;10h) <span class="ml-1 px-1.5 py-0.2 bg-tertiary-container text-tertiary-fixed rounded-full text-label-sm font-code-sm">14</span>
+</button>
+<button class="quick-pill px-3 py-1.5 rounded font-label-md text-label-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors" data-filter="VERIFY">
+          Pending Verification <span class="ml-1 px-1.5 py-0.2 bg-surface-variant text-on-primary-fixed-variant rounded-full text-label-sm">19</span>
+</button>
+</div>
+<!-- Batch Operations Strip (Visible upon selection) -->
+<div class="hidden items-center gap-space-sm pl-space-md" id="batchActionToolbar">
+<span class="font-label-sm text-label-sm text-secondary font-semibold" id="selectedCountText">3 rows selected</span>
+<button class="px-2.5 py-1 bg-surface-container-high text-on-surface font-label-sm text-label-sm rounded hover:bg-surface-variant transition-colors">Bulk Assign</button>
+<button class="px-2.5 py-1 bg-surface-container-high text-on-surface font-label-sm text-label-sm rounded hover:bg-surface-variant transition-colors">Set Priority</button>
+<button class="px-2.5 py-1 bg-error-container text-on-error-container font-label-sm text-label-sm rounded hover:opacity-90 transition-colors">Flag Escalation</button>
+</div>
+</div>
+</div>
+<!-- Ledger Metrics Mini-Ribbon -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded flex items-center justify-between shadow-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Active In-Flight</span>
+<span class="font-display-lg text-display-lg text-primary">147</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">sync</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded flex items-center justify-between shadow-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-error">Critical Severity</span>
+<span class="font-display-lg text-display-lg text-error">9</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-error-container flex items-center justify-center text-on-error-container">
+<span class="material-symbols-outlined">warning</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded flex items-center justify-between shadow-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Aggregate Rework</span>
+<span class="font-display-lg text-display-lg text-secondary">384.5h</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">timelapse</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded flex items-center justify-between shadow-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">First-Pass Parity</span>
+<span class="font-display-lg text-display-lg text-on-surface">94.8%</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">verified</span>
+</div>
+</div>
+</div>
+<!-- Data Ledger Container (FR-035 to FR-039) -->
+<div class="w-full bg-surface-container-lowest rounded shadow-sm overflow-hidden flex flex-col">
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left table-auto min-w-[1240px]">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-md text-label-md select-none">
+<th class="py-2.5 px-3 w-10 text-center">
+<input class="rounded w-4 h-4 cursor-pointer accent-primary" id="selectAllCheckbox" type="checkbox"/>
+</th>
+<th class="py-2.5 px-3">Discrepancy ID</th>
+<th class="py-2.5 px-3">Manuscript Ref</th>
+<th class="py-2.5 px-3">Journal</th>
+<th class="py-2.5 px-3">Category &amp; Root Cause Taxonomy</th>
+<th class="py-2.5 px-3">Severity / Priority</th>
+<th class="py-2.5 px-3">Status</th>
+<th class="py-2.5 px-3">Investigator</th>
+<th class="py-2.5 px-3">Rework</th>
+<th class="py-2.5 px-3">Created / Updated</th>
+<th class="py-2.5 px-3 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface font-body-md text-body-md" id="discrepancyTableBody">
+<!-- Row 1: PED-000125 (Critical / In Progress) -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group cursor-default">
+<td class="py-2.5 px-3 text-center">
+<input class="row-checkbox rounded w-4 h-4 accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-2.5 px-3 font-code-sm text-code-sm">
+<a class="text-primary font-bold hover:text-secondary underline decoration-dotted underline-offset-2 flex items-center gap-1" href="#">
+<span>PED-000125</span>
+<span class="material-symbols-outlined text-[13px] opacity-0 group-hover:opacity-100 transition-opacity">open_in_new</span>
+</a>
+</td>
+<td class="py-2.5 px-3 font-code-sm text-code-sm">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface">DEMO-2026-001</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm truncate max-w-[170px]" title="CRISPR CAS9 Targeted Sequence Cleavage">CRISPR CAS9 Cleavage...</span>
+</div>
+</td>
+<td class="py-2.5 px-3">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-code-sm text-code-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>JAB
+              </span>
+</td>
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-1 font-code-sm text-code-sm">
+<span class="px-1.5 py-0.5 bg-surface-container rounded text-on-surface">Metadata</span>
+<span class="text-outline text-xs">/</span>
+<span class="px-1.5 py-0.5 bg-surface-container-low rounded text-on-surface-variant truncate max-w-[130px]">CrossRef DOI</span>
+</div>
+</td>
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-xs">emergency</span>CRITICAL
+                </span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-code-sm text-code-sm font-bold">P1</span>
+</div>
+</td>
+<td class="py-2.5 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>IN PROGRESS
+              </span>
+</td>
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-2">
+<img alt="Eleanor Vance" class="w-6 h-6 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgZtJ3RB5fAKCbBO8OqISBg6VX4FKMgpBlPXNEWt279xqffyQBOOveGrmKlu74KsXC7aVvhTfmpqLSPPDl0aFYOzF-snaD5y921G24fY09NJb9DWjEE7fpRPNWv0pWIAJ2KmyWfIz4jQKIIB7JZgjCizvc5LbQ5CDsA1s0_2jB0uJB0KL3NpZ4YlGdvo6bSQGKKnhbHPEGdU7AusunrfRwI2pxDiNolj8k1HsBOJmB737Ue5aoqbuHRg"/>
+<span class="font-label-md text-label-md text-on-surface">Dr. E. Vance</span>
+</div>
+</td>
+<td class="py-2.5 px-3 font-code-sm text-code-sm">
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-semibold">12.5 hrs</span>
+</td>
+<td class="py-2.5 px-3 font-body-sm text-body-sm text-on-surface-variant">
+<div>Feb 24, 09:12</div>
+<div class="text-outline text-xs">22m ago</div>
+</td>
+<td class="py-2.5 px-3 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" onclick="openDetailsDrawer('PED-000125')" title="Quick Audit View">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" title="Log Rework">
+<span class="material-symbols-outlined text-base">history_toggle_off</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" title="Workflow Dispatch">
+<span class="material-symbols-outlined text-base">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: PED-000124 (High / Needs Triage) -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group cursor-default">
+<td class="py-2.5 px-3 text-center">
+<input class="row-checkbox rounded w-4 h-4 accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-2.5 px-3 font-code-sm text-code-sm">
+<a class="text-primary font-bold hover:text-secondary underline decoration-dotted underline-offset-2 flex items-center gap-1" href="#">
+<span>PED-000124</span>
+<span class="material-symbols-outlined text-[13px] opacity-0 group-hover:opacity-100 transition-opacity">open_in_new</span>
+</a>
+</td>
+<td class="py-2.5 px-3 font-code-sm text-code-sm">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface">BIO-2026-8891</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm truncate max-w-[170px]" title="Microbiome Taxonomic Classification Shifts">Microbiome Taxonomic...</span>
+</div>
+</td>
+<td class="py-2.5 px-3">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-code-sm text-code-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>IMR
+              </span>
+</td>
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-1 font-code-sm text-code-sm">
+<span class="px-1.5 py-0.5 bg-surface-container rounded text-on-surface">Peer Review</span>
+<span class="text-outline text-xs">/</span>
+<span class="px-1.5 py-0.5 bg-surface-container-low rounded text-on-surface-variant truncate max-w-[130px]">Reviewer Conflict</span>
+</div>
+</td>
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-xs">priority_high</span>HIGH
+                </span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-code-sm text-code-sm font-bold">P2</span>
+</div>
+</td>
+<td class="py-2.5 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>TRIAGED
+              </span>
+</td>
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center font-label-sm text-label-sm text-secondary font-bold">
+                  AK
+                </div>
+<span class="font-label-md text-label-md text-on-surface">Anil Kapoor</span>
+</div>
+</td>
+<td class="py-2.5 px-3 font-code-sm text-code-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">2.0 hrs</span>
+</td>
+<td class="py-2.5 px-3 font-body-sm text-body-sm text-on-surface-variant">
+<div>Feb 24, 08:30</div>
+<div class="text-outline text-xs">1h ago</div>
+</td>
+<td class="py-2.5 px-3 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" onclick="openDetailsDrawer('PED-000124')" title="Quick Audit View">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" title="Log Rework">
+<span class="material-symbols-outlined text-base">history_toggle_off</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" title="Workflow Dispatch">
+<span class="material-symbols-outlined text-base">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: PED-000123 (Medium / Verified) -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group cursor-default">
+<td class="py-2.5 px-3 text-center">
+<input class="row-checkbox rounded w-4 h-4 accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-2.5 px-3 font-code-sm text-code-sm">
+<a class="text-primary font-bold hover:text-secondary underline decoration-dotted underline-offset-2 flex items-center gap-1" href="#">
+<span>PED-000123</span>
+<span class="material-symbols-outlined text-[13px] opacity-0 group-hover:opacity-100 transition-opacity">open_in_new</span>
+</a>
+</td>
+<td class="py-2.5 px-3 font-code-sm text-code-sm">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface">MED-2026-4029</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm truncate max-w-[170px]" title="Clinical Trials Phase III Statistical Outliers">Clinical Trials Outliers...</span>
+</div>
+</td>
+<td class="py-2.5 px-3">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-code-sm text-code-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>JMC
+              </span>
+</td>
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-1 font-code-sm text-code-sm">
+<span class="px-1.5 py-0.5 bg-surface-container rounded text-on-surface">Production</span>
+<span class="text-outline text-xs">/</span>
+<span class="px-1.5 py-0.5 bg-surface-container-low rounded text-on-surface-variant truncate max-w-[130px]">MathML Mismatch</span>
+</div>
+</td>
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-xs">drag_handle</span>MEDIUM
+                </span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-code-sm text-code-sm font-bold">P3</span>
+</div>
+</td>
+<td class="py-2.5 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-variant text-on-primary-fixed-variant font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-tint"></span>VERIFIED
+              </span>
+</td>
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-secondary-fixed flex items-center justify-center font-label-sm text-label-sm text-on-secondary-fixed font-bold">
+                  SP
+                </div>
+<span class="font-label-md text-label-md text-on-surface">Sarah Palmer</span>
+</div>
+</td>
+<td class="py-2.5 px-3 font-code-sm text-code-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">4.5 hrs</span>
+</td>
+<td class="py-2.5 px-3 font-body-sm text-body-sm text-on-surface-variant">
+<div>Feb 23, 16:45</div>
+<div class="text-outline text-xs">17h ago</div>
+</td>
+<td class="py-2.5 px-3 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" onclick="openDetailsDrawer('PED-000123')" title="Quick Audit View">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" title="Log Rework">
+<span class="material-symbols-outlined text-base">history_toggle_off</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" title="Workflow Dispatch">
+<span class="material-symbols-outlined text-base">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: PED-000122 (Low / Closed) -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group cursor-default">
+<td class="py-2.5 px-3 text-center">
+<input class="row-checkbox rounded w-4 h-4 accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-2.5 px-3 font-code-sm text-code-sm">
+<a class="text-primary font-bold hover:text-secondary underline decoration-dotted underline-offset-2 flex items-center gap-1" href="#">
+<span>PED-000122</span>
+<span class="material-symbols-outlined text-[13px] opacity-0 group-hover:opacity-100 transition-opacity">open_in_new</span>
+</a>
+</td>
+<td class="py-2.5 px-3 font-code-sm text-code-sm">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface">QPR-2026-1022</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm truncate max-w-[170px]" title="Topological Insulator Quantum Hall Coherence">Topological Insulator...</span>
+</div>
+</td>
+<td class="py-2.5 px-3">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-code-sm text-code-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>QPR
+              </span>
+</td>
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-1 font-code-sm text-code-sm">
+<span class="px-1.5 py-0.5 bg-surface-container rounded text-on-surface">Workflow</span>
+<span class="text-outline text-xs">/</span>
+<span class="px-1.5 py-0.5 bg-surface-container-low rounded text-on-surface-variant truncate max-w-[130px]">Typeset Routing</span>
+</div>
+</td>
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-outline font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-xs">arrow_downward</span>LOW
+                </span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-outline font-code-sm text-code-sm font-bold">P3</span>
+</div>
+</td>
+<td class="py-2.5 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>CLOSED
+              </span>
+</td>
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-2">
+<img alt="Eleanor Vance" class="w-6 h-6 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgZtJ3RB5fAKCbBO8OqISBg6VX4FKMgpBlPXNEWt279xqffyQBOOveGrmKlu74KsXC7aVvhTfmpqLSPPDl0aFYOzF-snaD5y921G24fY09NJb9DWjEE7fpRPNWv0pWIAJ2KmyWfIz4jQKIIB7JZgjCizvc5LbQ5CDsA1s0_2jB0uJB0KL3NpZ4YlGdvo6bSQGKKnhbHPEGdU7AusunrfRwI2pxDiNolj8k1HsBOJmB737Ue5aoqbuHRg"/>
+<span class="font-label-md text-label-md text-on-surface">Dr. E. Vance</span>
+</div>
+</td>
+<td class="py-2.5 px-3 font-code-sm text-code-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">0.5 hrs</span>
+</td>
+<td class="py-2.5 px-3 font-body-sm text-body-sm text-on-surface-variant">
+<div>Feb 23, 11:20</div>
+<div class="text-outline text-xs">Feb 23</div>
+</td>
+<td class="py-2.5 px-3 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" onclick="openDetailsDrawer('PED-000122')" title="Quick Audit View">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" title="Log Rework">
+<span class="material-symbols-outlined text-base">history_toggle_off</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" title="Workflow Dispatch">
+<span class="material-symbols-outlined text-base">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: PED-000121 (Critical / Resolved) -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group cursor-default">
+<td class="py-2.5 px-3 text-center">
+<input class="row-checkbox rounded w-4 h-4 accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-2.5 px-3 font-code-sm text-code-sm">
+<a class="text-primary font-bold hover:text-secondary underline decoration-dotted underline-offset-2 flex items-center gap-1" href="#">
+<span>PED-000121</span>
+<span class="material-symbols-outlined text-[13px] opacity-0 group-hover:opacity-100 transition-opacity">open_in_new</span>
+</a>
+</td>
+<td class="py-2.5 px-3 font-code-sm text-code-sm">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface">TSE-2026-0044</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm truncate max-w-[170px]" title="Epistemic Trust Paradigms in Synthetic Biology">Epistemic Trust Synt...</span>
+</div>
+</td>
+<td class="py-2.5 px-3">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-code-sm text-code-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>TSE
+              </span>
+</td>
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-1 font-code-sm text-code-sm">
+<span class="px-1.5 py-0.5 bg-surface-container rounded text-on-surface">Metadata</span>
+<span class="text-outline text-xs">/</span>
+<span class="px-1.5 py-0.5 bg-surface-container-low rounded text-on-surface-variant truncate max-w-[130px]">Author ORCID ID</span>
+</div>
+</td>
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-xs">emergency</span>CRITICAL
+                </span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-code-sm text-code-sm font-bold">P1</span>
+</div>
+</td>
+<td class="py-2.5 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>RESOLVED
+              </span>
+</td>
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center font-label-sm text-label-sm text-secondary font-bold">
+                  DL
+                </div>
+<span class="font-label-md text-label-md text-on-surface">David Lin</span>
+</div>
+</td>
+<td class="py-2.5 px-3 font-code-sm text-code-sm">
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-semibold">14.0 hrs</span>
+</td>
+<td class="py-2.5 px-3 font-body-sm text-body-sm text-on-surface-variant">
+<div>Feb 22, 14:10</div>
+<div class="text-outline text-xs">Feb 22</div>
+</td>
+<td class="py-2.5 px-3 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" onclick="openDetailsDrawer('PED-000121')" title="Quick Audit View">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" title="Log Rework">
+<span class="material-symbols-outlined text-base">history_toggle_off</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" title="Workflow Dispatch">
+<span class="material-symbols-outlined text-base">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Data Table Pagination Strip (FR-038) -->
+<div class="flex flex-col sm:flex-row items-center justify-between px-space-md py-space-sm bg-surface-container-low border-t-0 gap-space-sm">
+<div class="flex items-center gap-space-md">
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+          Showing <strong class="text-on-surface font-semibold">1 - 10</strong> of <strong class="text-on-surface font-semibold">348</strong> items
+        </span>
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant">
+<span>Rows per page:</span>
+<select class="bg-surface-container-lowest px-2 py-0.5 rounded font-code-sm text-code-sm text-on-surface focus:outline-none cursor-pointer shadow-sm" id="pageSizeSelect">
+<option selected="" value="10">10</option>
+<option value="25">25</option>
+<option value="50">50</option>
+<option value="100">100</option>
+</select>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant disabled:opacity-40" disabled="" title="First Page">
+<span class="material-symbols-outlined text-base">first_page</span>
+</button>
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant disabled:opacity-40" disabled="" title="Previous Page">
+<span class="material-symbols-outlined text-base">chevron_left</span>
+</button>
+<div class="flex items-center gap-1 px-1">
+<button class="w-7 h-7 rounded font-label-md text-label-md bg-primary text-on-primary font-bold">1</button>
+<button class="w-7 h-7 rounded font-label-md text-label-md bg-surface-container-lowest text-on-surface hover:bg-surface-container">2</button>
+<button class="w-7 h-7 rounded font-label-md text-label-md bg-surface-container-lowest text-on-surface hover:bg-surface-container">3</button>
+<span class="px-1 text-outline font-code-sm">...</span>
+<button class="w-7 h-7 rounded font-label-md text-label-md bg-surface-container-lowest text-on-surface hover:bg-surface-container">35</button>
+</div>
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant" title="Next Page">
+<span class="material-symbols-outlined text-base">chevron_right</span>
+</button>
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant" title="Last Page">
+<span class="material-symbols-outlined text-base">last_page</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Operational Health & Rework Distribution Bento Grid Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Defect Categorization Sparkbars -->
+<div class="lg:col-span-8 bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-primary">Root-Cause Categorization Volume</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cross-journal discrepancy distribution (Active Sprint Q1)</span>
+</div>
+<span class="material-symbols-outlined text-secondary">pie_chart</span>
+</div>
+<div class="flex flex-col gap-space-sm my-2">
+<!-- Metric item 1 -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="text-on-surface">Manuscript Metadata &amp; CrossRef ORCID</span>
+<span class="font-code-sm text-code-sm font-bold text-primary">128 cases (36.8%)</span>
+</div>
+<div class="w-full h-2 rounded bg-surface-container-low overflow-hidden">
+<div class="h-full bg-primary rounded" style="width: 36.8%"></div>
+</div>
+</div>
+<!-- Metric item 2 -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="text-on-surface">Peer-Review Anonymity &amp; Assignment Breaches</span>
+<span class="font-code-sm text-code-sm font-bold text-secondary">84 cases (24.1%)</span>
+</div>
+<div class="w-full h-2 rounded bg-surface-container-low overflow-hidden">
+<div class="h-full bg-secondary rounded" style="width: 24.1%"></div>
+</div>
+</div>
+<!-- Metric item 3 -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="text-on-surface">MathML Formula Corruption &amp; Typesetting Offset</span>
+<span class="font-code-sm text-code-sm font-bold text-tertiary-container">72 cases (20.6%)</span>
+</div>
+<div class="w-full h-2 rounded bg-surface-container-low overflow-hidden">
+<div class="h-full bg-on-tertiary-container rounded" style="width: 20.6%"></div>
+</div>
+</div>
+<!-- Metric item 4 -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="text-on-surface">Embargo Date Schedule Mismatch</span>
+<span class="font-code-sm text-code-sm font-bold text-error">64 cases (18.5%)</span>
+</div>
+<div class="w-full h-2 rounded bg-surface-container-low overflow-hidden">
+<div class="h-full bg-error rounded" style="width: 18.5%"></div>
+</div>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between border-t-0 text-on-surface-variant font-code-sm text-code-sm">
+<span>Target Parity SLA: 98.0%</span>
+<span class="text-secondary font-bold">Action Plan #2026-Q1 Active</span>
+</div>
+</div>
+<!-- Editorial Ops SLA & Integrity Status Card -->
+<div class="lg:col-span-4 bg-primary text-on-primary p-space-md rounded shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-code-sm text-code-sm">SLA METRIC 5.1</span>
+<span class="material-symbols-outlined text-secondary-container">policy</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-primary mt-2">Critical Triage SLA</h3>
+<p class="font-body-sm text-body-sm text-on-primary-container leading-relaxed">
+          Critical defects require triage attribution within 4 business hours. Current adherence across 142 portfolio journals stands at:
+        </p>
+</div>
+<div class="my-space-md flex items-end gap-space-sm">
+<span class="font-display-lg text-display-lg text-secondary-container font-bold">98.2%</span>
+<span class="font-label-sm text-label-sm text-on-primary mb-1 uppercase tracking-wider font-semibold text-secondary-fixed">within target</span>
+</div>
+<div class="p-space-sm bg-primary-container rounded flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary-container text-lg">info</span>
+<span class="font-body-sm text-body-sm text-on-primary-container">Next automated batch synchronization occurs at 14:00 UTC.</span>
+</div>
+</div>
+</div>
+<!-- Quick Log Discrepancy Modal Slide-Over Drawer (FR-001 to FR-005) -->
+<div class="fixed inset-0 z-50 overflow-hidden pointer-events-none hidden transition-opacity duration-300" id="quickLogDrawer">
+<!-- Backdrop Blur Scrim -->
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-xs transition-opacity duration-300 opacity-0 pointer-events-auto" id="drawerBackdrop" onclick="closeQuickLogModal()"></div>
+<div class="absolute inset-y-0 right-0 max-w-full flex pl-10">
+<div class="w-screen max-w-xl bg-surface-container-lowest shadow-2xl flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out pointer-events-auto" id="drawerPanel">
+<!-- Drawer Header -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-lg">new_releases</span>
+<h2 class="font-headline-md text-headline-md text-primary">Log New Discrepancy</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">FR-001 Intake Protocol • T&amp;F Ops</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" onclick="closeQuickLogModal()">
+<span class="material-symbols-outlined text-base">close</span>
+</button>
+</div>
+<!-- Form Scrollable Core -->
+<div class="px-space-lg py-space-md flex-1 overflow-y-auto flex flex-col gap-space-md">
+<!-- Notice alert -->
+<div class="p-space-sm bg-surface-container rounded flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-base mt-0.5">help</span>
+<div class="flex flex-col text-on-surface">
+<span class="font-label-md text-label-md font-semibold">Standard Defect Logging</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Assigned triage leads will be immediately notified via internal dispatch once committed to SQLite storage.</span>
+</div>
+</div>
+<!-- Input: Discrepancy Title -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between">
+<span>Discrepancy Summary / Title <span class="text-error">*</span></span>
+<span class="text-outline font-normal text-xs">Max 120 chars</span>
+</label>
+<input class="h-9 px-3 bg-surface-container-low text-on-surface font-body-md text-body-md rounded focus:outline-none focus:bg-surface-container-lowest shadow-sm" id="inputTitle" placeholder="e.g., CrossRef DOI 404 payload return during early accessioning" type="text"/>
+</div>
+<!-- Dual Field: Manuscript ID & Journal Lookup -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">
+                Manuscript ID <span class="text-error">*</span>
+</label>
+<input class="h-9 px-3 bg-surface-container-low font-code-sm text-code-sm text-on-surface rounded focus:outline-none focus:bg-surface-container-lowest shadow-sm" id="inputManuscript" placeholder="e.g. DEMO-2026-9921" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">
+                Journal Affiliation <span class="text-error">*</span>
+</label>
+<select class="h-9 px-3 bg-surface-container-low text-on-surface font-label-md text-label-md rounded focus:outline-none shadow-sm cursor-pointer" id="inputJournal">
+<option value="">Select Journal...</option>
+<option value="JAB">JAB - Applied Bioscience</option>
+<option value="IMR">IMR - Intl Medical Review</option>
+<option value="JMC">JMC - Materials Chemistry</option>
+<option value="QPR">QPR - Quantum Physics</option>
+<option value="TSE">TSE - Social Epistemology</option>
+</select>
+</div>
+</div>
+<!-- Dropdown: Defect Category & Root Cause (FR-003) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">
+                Defect Category <span class="text-error">*</span>
+</label>
+<select class="h-9 px-3 bg-surface-container-low text-on-surface font-label-md text-label-md rounded focus:outline-none shadow-sm cursor-pointer" id="inputCategory">
+<option value="METADATA">Manuscript Metadata</option>
+<option value="WORKFLOW">Workflow Transition</option>
+<option value="PEER_REVIEW">Peer Review Integrity</option>
+<option value="PRODUCTION">Typeset &amp; MathParity</option>
+<option value="CROSSREF">CrossRef DOI Integrity</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">
+                Priority Tier
+              </label>
+<select class="h-9 px-3 bg-surface-container-low text-on-surface font-label-md text-label-md rounded focus:outline-none shadow-sm cursor-pointer" id="inputPriority">
+<option value="P1">P1 - Highest Operational Halt</option>
+<option selected="" value="P2">P2 - Standard Production Track</option>
+<option value="P3">P3 - Non-blocking Minor</option>
+</select>
+</div>
+</div>
+<!-- Radio Selector: Severity (FR-004) -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold">
+              Severity Level <span class="text-error">*</span>
+</label>
+<div class="grid grid-cols-4 gap-space-xs">
+<label class="flex flex-col items-center justify-center p-2 rounded bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors text-center border-0 has-[:checked]:bg-error-container has-[:checked]:text-on-error-container">
+<input class="sr-only" name="severityOption" type="radio" value="CRITICAL"/>
+<span class="font-label-sm text-label-sm font-bold uppercase">Critical</span>
+<span class="font-code-sm text-[10px] opacity-80 mt-0.5">SLA &lt;4h</span>
+</label>
+<label class="flex flex-col items-center justify-center p-2 rounded bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors text-center border-0 has-[:checked]:bg-tertiary-fixed has-[:checked]:text-on-tertiary-fixed-variant">
+<input checked="" class="sr-only" name="severityOption" type="radio" value="HIGH"/>
+<span class="font-label-sm text-label-sm font-bold uppercase">High</span>
+<span class="font-code-sm text-[10px] opacity-80 mt-0.5">SLA &lt;12h</span>
+</label>
+<label class="flex flex-col items-center justify-center p-2 rounded bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors text-center border-0 has-[:checked]:bg-surface-container-high has-[:checked]:text-primary">
+<input class="sr-only" name="severityOption" type="radio" value="MEDIUM"/>
+<span class="font-label-sm text-label-sm font-bold uppercase">Medium</span>
+<span class="font-code-sm text-[10px] opacity-80 mt-0.5">SLA 24h</span>
+</label>
+<label class="flex flex-col items-center justify-center p-2 rounded bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors text-center border-0 has-[:checked]:bg-surface-container has-[:checked]:text-on-surface">
+<input class="sr-only" name="severityOption" type="radio" value="LOW"/>
+<span class="font-label-sm text-label-sm font-bold uppercase">Low</span>
+<span class="font-code-sm text-[10px] opacity-80 mt-0.5">SLA 48h</span>
+</label>
+</div>
+</div>
+<!-- Evidence File Upload Dropzone (FR-005) -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">
+              Evidence &amp; Telemetry Payload (XML, PDF, Log, PNG)
+            </label>
+<div class="p-space-lg rounded bg-surface-container-low flex flex-col items-center justify-center text-center cursor-pointer hover:bg-surface-container transition-colors" id="dropzone">
+<span class="material-symbols-outlined text-2xl text-secondary mb-1">cloud_upload</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Click to browse or drag discrepancy log files</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Supported: JATS-XML, NISO-STS, PDF Proofs up to 25MB</span>
+<input class="hidden" id="fileInput" multiple="" type="file"/>
+</div>
+</div>
+<!-- Description / Discrepancy Narrative -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">
+              Root-Cause Detailed Narrative
+            </label>
+<textarea class="p-2.5 bg-surface-container-low text-on-surface font-body-md text-body-md rounded focus:outline-none focus:bg-surface-container-lowest shadow-sm resize-none" id="inputDescription" placeholder="Provide step-by-step reproduction steps, affected formula numbers or specific author affiliation inconsistencies..." rows="3"></textarea>
+</div>
+</div>
+<!-- Drawer Footer Actions -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex items-center justify-between">
+<button class="px-4 py-2 rounded bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors shadow-sm" onclick="closeQuickLogModal()">
+            Cancel
+          </button>
+<div class="flex items-center gap-space-sm">
+<button class="px-3 py-2 rounded bg-surface-container-high text-primary font-label-md text-label-md hover:bg-surface-variant transition-colors" onclick="submitNewDiscrepancy(true)">
+              Save as Draft
+            </button>
+<button class="px-5 py-2 rounded bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md font-semibold transition-all shadow-md active:scale-95 flex items-center gap-1.5" onclick="submitNewDiscrepancy(false)">
+<span class="material-symbols-outlined text-sm">send</span>
+<span>Commit Discrepancy</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Detail Slide-Over Inspection Drawer (FR-039) -->
+<div class="fixed inset-0 z-50 overflow-hidden pointer-events-none hidden transition-opacity duration-300" id="detailInspectionDrawer">
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-xs transition-opacity duration-300 opacity-0 pointer-events-auto" id="detailBackdrop" onclick="closeDetailsDrawer()"></div>
+<div class="absolute inset-y-0 right-0 max-w-full flex pl-10">
+<div class="w-screen max-w-md bg-surface-container-lowest shadow-2xl flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out pointer-events-auto" id="detailPanel">
+<div class="px-space-lg py-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm text-secondary font-bold" id="detailDrawerId">PED-000125</span>
+<span class="font-headline-sm text-headline-sm text-primary">Inspection Telemetry</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" onclick="closeDetailsDrawer()">
+<span class="material-symbols-outlined text-base">close</span>
+</button>
+</div>
+<div class="px-space-lg py-space-md flex-1 overflow-y-auto flex flex-col gap-space-md">
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Manuscript Context</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold" id="detailDrawerTitle">CRISPR CAS9 Targeted Sequence Cleavage</span>
+<span class="font-code-sm text-code-sm text-outline">DEMO-2026-001 • JAB Journal</span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Workflow Milestones</span>
+<div class="flex flex-col gap-2 pl-2">
+<div class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span>Ingestion Automated Flag (XML Parser)</span>
+</div>
+<div class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span>Triaged by Integrity Desk (Dr. Vance)</span>
+</div>
+<div class="flex items-center gap-2 font-label-md text-label-md text-secondary font-semibold">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>
+<span>Typeset Parity Check (In Progress)</span>
+</div>
+<div class="flex items-center gap-2 font-label-md text-label-md text-outline">
+<span class="w-2.5 h-2.5 rounded-full bg-outline-variant"></span>
+<span>Final PARCS Compliance Certification</span>
+</div>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container rounded flex flex-col gap-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Latest Dispatch Remark</span>
+<p>Author queried regarding mismatched funding grant numbers in section 4.1. Supplemental table re-conversion currently pending author signoff.</p>
+</div>
+</div>
+<div class="px-space-lg py-space-md bg-surface-container-low flex items-center justify-between">
+<button class="px-4 py-2 rounded bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors shadow-sm" onclick="closeDetailsDrawer()">
+            Close Panel
+          </button>
+<a class="px-4 py-2 rounded bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md inline-flex items-center gap-1 shadow-sm" href="#">
+<span>Open Full Workflow</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Drawer Handling Logic (FR-001 to FR-005)
+  const quickLogDrawer = document.getElementById('quickLogDrawer');
+  const drawerBackdrop = document.getElementById('drawerBackdrop');
+  const drawerPanel = document.getElementById('drawerPanel');
+
+  const detailDrawer = document.getElementById('detailInspectionDrawer');
+  const detailBackdrop = document.getElementById('detailBackdrop');
+  const detailPanel = document.getElementById('detailPanel');
+
+  function openQuickLogModal() {
+    quickLogDrawer.classList.remove('hidden');
+    setTimeout(() => {
+      drawerBackdrop.classList.remove('opacity-0');
+      drawerBackdrop.classList.add('opacity-100');
+      drawerPanel.classList.remove('translate-x-full');
+      drawerPanel.classList.add('translate-x-0');
+    }, 10);
+  }
+
+  function closeQuickLogModal() {
+    drawerBackdrop.classList.remove('opacity-100');
+    drawerBackdrop.classList.add('opacity-0');
+    drawerPanel.classList.remove('translate-x-0');
+    drawerPanel.classList.add('translate-x-full');
+    setTimeout(() => {
+      quickLogDrawer.classList.add('hidden');
+    }, 300);
+  }
+
+  function openDetailsDrawer(id) {
+    document.getElementById('detailDrawerId').textContent = id;
+    detailDrawer.classList.remove('hidden');
+    setTimeout(() => {
+      detailBackdrop.classList.remove('opacity-0');
+      detailBackdrop.classList.add('opacity-100');
+      detailPanel.classList.remove('translate-x-full');
+      detailPanel.classList.add('translate-x-0');
+    }, 10);
+  }
+
+  function closeDetailsDrawer() {
+    detailBackdrop.classList.remove('opacity-100');
+    detailBackdrop.classList.add('opacity-0');
+    detailPanel.classList.remove('translate-x-0');
+    detailPanel.classList.add('translate-x-full');
+    setTimeout(() => {
+      detailDrawer.classList.add('hidden');
+    }, 300);
+  }
+
+  document.getElementById('btnOpenQuickLog').addEventListener('click', openQuickLogModal);
+
+  // File Dropzone Visual Stimulation
+  const dropzone = document.getElementById('dropzone');
+  const fileInput = document.getElementById('fileInput');
+
+  dropzone.addEventListener('click', () => fileInput.click());
+  dropzone.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    dropzone.classList.add('bg-surface-container-high');
+  });
+  dropzone.addEventListener('dragleave', () => {
+    dropzone.classList.remove('bg-surface-container-high');
+  });
+  dropzone.addEventListener('drop', (e) => {
+    e.preventDefault();
+    dropzone.classList.remove('bg-surface-container-high');
+    if (e.dataTransfer.files.length > 0) {
+      dropzone.querySelector('.font-label-md').textContent = `${e.dataTransfer.files.length} payload file(s) attached`;
+    }
+  });
+
+  // Table Row Selection & Batch Operations (FR-035)
+  const selectAll = document.getElementById('selectAllCheckbox');
+  const rowCheckboxes = document.querySelectorAll('.row-checkbox');
+  const batchToolbar = document.getElementById('batchActionToolbar');
+  const selectedCountText = document.getElementById('selectedCountText');
+
+  function updateBatchState() {
+    const checkedCount = document.querySelectorAll('.row-checkbox:checked').length;
+    if (checkedCount > 0) {
+      batchToolbar.classList.remove('hidden');
+      batchToolbar.classList.add('inline-flex');
+      selectedCountText.textContent = `${checkedCount} row${checkedCount > 1 ? 's' : ''} selected`;
+    } else {
+      batchToolbar.classList.add('hidden');
+      batchToolbar.classList.remove('inline-flex');
+    }
+  }
+
+  selectAll.addEventListener('change', (e) => {
+    rowCheckboxes.forEach(cb => cb.checked = e.target.checked);
+    updateBatchState();
+  });
+
+  rowCheckboxes.forEach(cb => {
+    cb.addEventListener('change', () => {
+      const allChecked = Array.from(rowCheckboxes).every(c => c.checked);
+      selectAll.checked = allChecked;
+      updateBatchState();
+    });
+  });
+
+  // Filter Quick Pills Toggling
+  const quickPills = document.querySelectorAll('.quick-pill');
+  quickPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      quickPills.forEach(p => {
+        p.classList.remove('bg-primary-container', 'text-on-primary', 'font-semibold', 'shadow-sm');
+        p.classList.add('bg-surface-container', 'text-on-surface-variant');
+      });
+      pill.classList.remove('bg-surface-container', 'text-on-surface-variant');
+      pill.classList.add('bg-primary-container', 'text-on-primary', 'font-semibold', 'shadow-sm');
+    });
+  });
+
+  // Search input clear interaction
+  const searchInput = document.getElementById('tableSearchInput');
+  const clearBtn = document.getElementById('clearSearchBtn');
+
+  searchInput.addEventListener('input', (e) => {
+    if (e.target.value.trim().length > 0) {
+      clearBtn.classList.remove('hidden');
+    } else {
+      clearBtn.classList.add('hidden');
+    }
+  });
+
+  clearBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    clearBtn.classList.add('hidden');
+    searchInput.focus();
+  });
+
+  // Discrepancy Submission Handler
+  function submitNewDiscrepancy(isDraft) {
+    const title = document.getElementById('inputTitle').value;
+    const manuscript = document.getElementById('inputManuscript').value;
+
+    if (!title || !manuscript) {
+      alert('Please fill in both the Title and Manuscript Reference before committing.');
+      return;
+    }
+
+    const mode = isDraft ? 'Draft Discrepancy stored' : 'Discrepancy officially registered';
+    alert(`${mode}: ${manuscript} has been committed to the operations register.`);
+    closeQuickLogModal();
+  }
+
+  // Export handlers
+  document.getElementById('btnExportCsv').addEventListener('click', () => {
+    alert('Exporting 348 filtered records in RFC-4180 CSV format.');
+  });
+  document.getElementById('btnExportXlsx').addEventListener('click', () => {
+    alert('Generating formatted Excel (.xlsx) operational ledger export.');
+  });
+</script></div></main></div></body></html>

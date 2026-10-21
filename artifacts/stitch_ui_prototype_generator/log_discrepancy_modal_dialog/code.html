@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-primary-container":"#87a0cd","tertiary-fixed":"#ffdcc3","secondary-fixed":"#b5ebff","surface-tint":"#465f88","surface-container-lowest":"#ffffff","on-surface-variant":"#44474e","on-tertiary-fixed-variant":"#6e3900","on-secondary-container":"#00647b","tertiary":"#361900","surface-container-high":"#d8eaff","secondary-fixed-dim":"#7ed2ef","tertiary-container":"#552b00","inverse-primary":"#aec7f7","secondary-container":"#8ce0fd","primary":"#002046","tertiary-fixed-dim":"#ffb77d","on-secondary-fixed":"#001f28","on-primary":"#ffffff","on-secondary":"#ffffff","on-primary-fixed-variant":"#2e476f","on-tertiary":"#ffffff","surface-variant":"#cfe5fd","background":"#f7f9ff","on-primary-fixed":"#001b3d","on-background":"#061d2f","on-error":"#ffffff","on-tertiary-container":"#eb851c","surface":"#f7f9ff","on-error-container":"#93000a","surface-container":"#e3efff","inverse-on-surface":"#e8f2ff","outline-variant":"#c4c6cf","error-container":"#ffdad6","primary-fixed":"#d6e3ff","surface-bright":"#f7f9ff","primary-fixed-dim":"#aec7f7","surface-dim":"#c7dcf4","outline":"#74777f","surface-container-highest":"#cfe5fd","primary-container":"#1b365d","on-tertiary-fixed":"#2f1500","on-surface":"#061d2f","inverse-surface":"#1d3245","surface-container-low":"#edf4ff","error":"#ba1a1a","secondary":"#00677e","on-secondary-fixed-variant":"#004e60"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-xl":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem","gutter":"1rem","margin":"1rem","space-md":"0.75rem","space-lg":"1rem","gutter-lg":"1.5rem","margin-lg":"2rem","margin-md":"1.5rem"},"fontFamily":{"label-lg":["Inter"],"headline-sm":["Inter"],"label-sm":["Inter"],"body-md":["\"Source Sans 3\""],"body-sm":["\"Source Sans 3\""],"display-lg":["Inter"],"code-sm":["JetBrains Mono"],"headline-lg-mobile":["Inter"],"body-lg":["\"Source Sans 3\""],"headline-md":["Inter"],"headline-lg":["Inter"],"label-md":["Inter"]},"fontSize":{"label-lg":["14px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"600"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"code-sm":["11px",{"lineHeight":"16px","fontWeight":"500"}],"headline-lg-mobile":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-md":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface min-h-screen selection:bg-secondary-container selection:text-on-secondary-container"><header class="fixed top-0 left-0 right-0 h-16 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50"><div class="w-full h-16 px-gutter-lg flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md shrink-0"><img alt="Taylor &amp; Francis Tracker Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UpD-23D_mgy0CPURUmO4aZuI4T_I0HlUxfw_O5fRg2WaPNzu6e6fnsYsp6vlNM4LVsuhcoe-jxzO1KFzewDAD-QljGu-EP2UUpoCJPZ_IelziZ0REIUHWN_bLWb3AH9PVDOgzI_iA_3bSAM3xFaSd-R-EwLejyiJOPzSYbexCUOXFzL-U5ZDreKq7m5YCpe7Gh77707KejevvXvyHtvHwUaDJsdNetKBv1jgZ8iu7LQ35bvgblXY6G3_g5"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">Taylor &amp; Francis</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Discrepancy Tracker</span></div><div class="h-6 w-px bg-outline-variant mx-space-xs hidden sm:block"></div><div class="hidden lg:flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded text-on-surface-variant cursor-pointer hover:bg-surface-container hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-sm">menu_book</span><span class="font-label-md text-label-md">All Active Journals (142)</span><span class="material-symbols-outlined text-xs">arrow_drop_down</span></div><div class="hidden xl:flex items-center gap-space-xs bg-surface-container px-space-xs py-0.5 rounded font-code-sm text-code-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span>SQLite Production v1.2</span></div></div><div class="flex-1 max-w-md mx-gutter hidden md:block"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-3 text-outline text-base">search</span><input class="w-full h-8 pl-9 pr-3 bg-surface-container-lowest text-on-surface font-body-sm text-body-sm rounded border border-outline-variant placeholder:text-outline focus:outline-none focus:border-secondary" placeholder="Search Discrepancy ID, Manuscript Ref, DOI..." type="text"/></div></div><div class="flex items-center gap-space-md shrink-0"><button class="inline-flex items-center gap-space-xs bg-primary text-on-primary hover:bg-primary-container px-space-sm py-1.5 rounded font-label-md text-label-md transition-colors shadow-sm" type="button"><span class="material-symbols-outlined text-sm">add</span><span>Log Discrepancy</span></button><div class="relative cursor-pointer p-1 rounded hover:bg-surface-container-high transition-colors text-on-surface-variant"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-0 right-0 w-4 h-4 bg-error text-on-error font-label-sm text-label-sm rounded-full flex items-center justify-center font-bold">4</span></div><div class="h-6 w-px bg-outline-variant"></div><div class="flex items-center gap-space-sm cursor-pointer hover:bg-surface-container px-space-xs py-1 rounded transition-colors"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgZtJ3RB5fAKCbBO8OqISBg6VX4FKMgpBlPXNEWt279xqffyQBOOveGrmKlu74KsXC7aVvhTfmpqLSPPDl0aFYOzF-snaD5y921G24fY09NJb9DWjEE7fpRPNWv0pWIAJ2KmyWfIz4jQKIIB7JZgjCizvc5LbQ5CDsA1s0_2jB0uJB0KL3NpZ4YlGdvo6bSQGKKnhbHPEGdU7AusunrfRwI2pxDiNolj8k1HsBOJmB737Ue5aoqbuHRg"/><div class="hidden xl:flex flex-col text-left leading-tight"><span class="font-label-md text-label-md text-on-surface font-semibold">Dr. Eleanor Vance</span><span class="font-label-sm text-label-sm text-on-surface-variant">Editorial Ops Director</span></div><span class="material-symbols-outlined text-outline text-sm hidden xl:block">expand_more</span></div></div></div></header><aside class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-64 bg-surface-container-lowest border-r border-outline-variant z-40 flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-lg"><div class="px-space-md"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Editorial Operations</span></div><nav class="flex flex-col gap-1 px-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-sm"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="executive-dashboard" href="#"><span class="material-symbols-outlined text-lg">dashboard</span><span>Executive Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="discrepancy-register" href="#"><span class="material-symbols-outlined text-lg">checklist_rtl</span><span>Discrepancy Register</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="discrepancy-detail-workflow" href="#"><span class="material-symbols-outlined text-lg">rule_settings</span><span>Detail &amp; Workflow</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="rework-analytics" href="#"><span class="material-symbols-outlined text-lg">query_stats</span><span>Rework &amp; Analytics</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="admin-taxonomy" href="#"><span class="material-symbols-outlined text-lg">tune</span><span>Admin &amp; Taxonomy</span></a></nav></div><div class="px-space-md py-space-sm border-t border-outline-variant"><div class="flex items-center justify-between text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-sm text-secondary">lock_clock</span><span class="font-label-sm text-label-sm uppercase">Sync Cycle: 4m ago</span></div><span class="font-code-sm text-code-sm text-outline">DB OK</span></div></div></aside><div class="pl-64"><main class="pt-16 min-h-screen bg-surface"><div class="flex flex-col w-full relative">
+<!-- Background Layer: Editorial Ledger (Discrepancy Register Workspace) -->
+<div class="w-full px-gutter-lg py-margin select-none pointer-events-none opacity-40 filter blur-[1px]">
+<!-- Workspace Subheader -->
+<div class="flex items-center justify-between pb-space-lg">
+<div class="flex items-center gap-space-md">
+<span class="font-headline-lg text-headline-lg text-primary tracking-tight">Discrepancy Master Register</span>
+<span class="bg-surface-container px-space-sm py-0.5 rounded font-code-sm text-code-sm text-on-surface-variant font-medium">1,482 Tracked Records</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="bg-surface-container-low px-space-md py-1.5 rounded text-on-surface-variant font-label-md text-label-md flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sm">filter_alt</span> Filter Views
+        </div>
+<div class="bg-primary text-on-primary px-space-md py-1.5 rounded font-label-md text-label-md flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sm">download</span> Export TSV
+        </div>
+</div>
+</div>
+<!-- Data Summary KPI Strip -->
+<div class="grid grid-cols-4 gap-gutter mb-space-lg">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">Critical Blockers (P1)</span>
+<div class="font-display-lg text-display-lg text-primary mt-1">7</div>
+<span class="font-code-sm text-code-sm text-error flex items-center gap-1 mt-1"><span class="w-1.5 h-1.5 rounded-full bg-error"></span>2 Breaching SLA</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">Active Metadata Rework</span>
+<div class="font-display-lg text-display-lg text-primary mt-1">34</div>
+<span class="font-code-sm text-code-sm text-secondary flex items-center gap-1 mt-1">Avg turnaround 3.8h</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">Peer Review Inconsistencies</span>
+<div class="font-display-lg text-display-lg text-primary mt-1">19</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">In integrity triage</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">Resolution Rate (7d)</span>
+<div class="font-display-lg text-display-lg text-primary mt-1">94.2%</div>
+<span class="font-code-sm text-code-sm text-secondary">+1.4% vs benchmark</span>
+</div>
+</div>
+<!-- Simulated Data Ledger Table -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="grid grid-cols-12 px-space-md py-space-sm bg-surface-container-low font-label-md text-label-md text-on-surface-variant uppercase">
+<div class="col-span-2">ID &amp; Priority</div>
+<div class="col-span-3">Target Journal / Ref</div>
+<div class="col-span-4">Discrepancy Vector</div>
+<div class="col-span-2">Triage Owner</div>
+<div class="col-span-1 text-right">Age</div>
+</div>
+<div class="divide-y divide-surface-container">
+<div class="grid grid-cols-12 px-space-md py-3 items-center text-body-sm font-body-sm">
+<div class="col-span-2 font-code-sm text-code-sm text-primary font-bold">PED-000125 · <span class="text-error font-semibold">P1</span></div>
+<div class="col-span-3 font-semibold text-on-surface">Annals of Biomedical Tech <span class="block font-code-sm text-on-surface-variant">ABT-2026-904</span></div>
+<div class="col-span-4 text-on-surface truncate">MathML entity corrupt in Equation (14) during XML roundtrip</div>
+<div class="col-span-2 text-on-surface-variant">D. Morrison</div>
+<div class="col-span-1 text-right font-code-sm text-code-sm text-on-surface-variant">1h 12m</div>
+</div>
+<div class="grid grid-cols-12 px-space-md py-3 items-center text-body-sm font-body-sm bg-surface-container-lowest">
+<div class="col-span-2 font-code-sm text-code-sm text-primary font-bold">PED-000124 · <span class="text-secondary font-semibold">P3</span></div>
+<div class="col-span-3 font-semibold text-on-surface">Intl. Journal of Social Robotics <span class="block font-code-sm text-on-surface-variant">IJSR-2025-1108</span></div>
+<div class="col-span-4 text-on-surface truncate">Licensing CC-BY-NC mismatched in PDF proof run</div>
+<div class="col-span-2 text-on-surface-variant">M. Kowalski</div>
+<div class="col-span-1 text-right font-code-sm text-code-sm text-on-surface-variant">6h 40m</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal Backdrop Overlay -->
+<div class="fixed inset-0 z-50 bg-[#0F2537]/50 backdrop-blur-[3px] flex items-center justify-center p-gutter overflow-y-auto">
+<!-- Modal Dialog Surface Container -->
+<div aria-labelledby="modal-headline" aria-modal="true" class="relative w-full max-w-4xl bg-surface-container-lowest rounded-xl shadow-2xl flex flex-col max-h-[942px] overflow-hidden my-auto animate-in fade-in zoom-in-95 duration-150" role="dialog">
+<!-- Modal Header (Institutional Bar) -->
+<div class="shrink-0 px-space-xl pt-space-lg pb-space-md bg-surface-container-low flex items-start justify-between gap-space-lg">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center shrink-0 shadow-sm mt-0.5">
+<span class="material-symbols-outlined text-xl">fact_check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight" id="modal-headline">Log New Discrepancy</h2>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded font-code-sm text-code-sm font-semibold bg-surface-container-highest text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Auto-ID: PED-000126 (Draft • Read-Only)
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Capture publisher ↔ editor operational friction, taxonomy vector, and evidence artifacts for automated workflow triage.
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<span class="hidden sm:inline-flex px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-code-sm text-code-sm uppercase">ESC to close</span>
+<button aria-label="Close dialog" class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+</div>
+<!-- Modal Scrollable Content Workspace -->
+<form class="flex-1 overflow-y-auto px-space-xl py-space-lg space-y-space-xl text-on-surface bg-surface-container-lowest" id="discrepancy-form">
+<!-- 1. Manuscript & Journal Reference (FR-003, RULE-002) -->
+<section class="space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase tracking-wider">01. Manuscript &amp; Journal Reference</span>
+<span class="font-code-sm text-code-sm text-outline">FR-003 · RULE-002</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-xs">verified</span> Canonical DB Synced
+            </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md">
+<!-- Target Journal Selector -->
+<div class="md:col-span-7 flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between">
+<span>Target Journal Catalog <span class="text-error">*</span></span>
+<span class="font-code-sm text-code-sm text-on-surface-variant font-normal">ISSN 2470-1394</span>
+</label>
+<div class="relative">
+<div class="w-full h-10 px-space-md bg-surface-container-low rounded-lg flex items-center justify-between cursor-pointer hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="px-space-xs py-0.5 rounded bg-primary text-on-primary font-code-sm text-code-sm font-bold">JAB-101</span>
+<span class="font-body-md text-body-md text-primary font-semibold truncate">Journal of Applied Bioscience</span>
+<span class="px-1.5 py-0.5 rounded font-label-sm text-label-sm bg-secondary-container text-on-secondary-container font-semibold">Q1 Scopus</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-base">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Manuscript Tracking Reference -->
+<div class="md:col-span-5 flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between">
+<span>Manuscript Ref (EM ID) <span class="text-error">*</span></span>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-0.5 font-semibold">
+<span class="material-symbols-outlined text-xs">check_circle</span> Validated
+                </span>
+</label>
+<div class="relative flex items-center">
+<input class="w-full h-10 pl-space-md pr-9 bg-surface-container-low text-primary font-code-sm text-code-sm font-semibold rounded-lg focus:outline-none focus:bg-surface-container" type="text" value="DEMO-2026-002"/>
+<span class="material-symbols-outlined absolute right-3 text-secondary text-base">task_alt</span>
+</div>
+</div>
+<!-- Article DOI -->
+<div class="md:col-span-6 flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-space-xs">
+<span>Article Registered DOI</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-normal">(Optional if unassigned)</span>
+</label>
+<div class="relative flex items-center">
+<span class="absolute left-3 font-code-sm text-code-sm text-outline">https://doi.org/</span>
+<input class="w-full h-9 pl-32 pr-space-md bg-surface-container-low text-on-surface font-code-sm text-code-sm rounded-lg focus:outline-none focus:bg-surface-container" type="text" value="10.1080/jab.2026.002"/>
+</div>
+</div>
+<!-- Workflow Ingestion Stage Radio/Pill Group -->
+<div class="md:col-span-6 flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">
+                Workflow Lifecycle Stage <span class="text-error">*</span>
+</label>
+<div class="grid grid-cols-2 gap-1.5 h-9">
+<button class="px-space-xs py-1 rounded bg-surface-container-low text-on-surface-variant hover:bg-surface-container font-label-sm text-label-sm truncate text-center transition-colors" type="button">
+                  Pre-Peer Review
+                </button>
+<button class="px-space-xs py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm font-semibold truncate text-center shadow-sm flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-xs">done</span> Ingestion Stage
+                </button>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Classification & Urgency (FR-006, FR-008, FR-009) -->
+<section class="space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase tracking-wider">02. Classification &amp; Urgency Matrix</span>
+<span class="font-code-sm text-code-sm text-outline">FR-006 · FR-008 · FR-009</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SLA Timer commences upon dispatch</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md">
+<!-- Defect Category Dropdown -->
+<div class="md:col-span-4 flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Primary Defect Category <span class="text-error">*</span></label>
+<div class="relative">
+<select class="w-full h-9 pl-space-md pr-8 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg appearance-none focus:outline-none focus:bg-surface-container">
+<option selected="">Manuscript Metadata</option>
+<option>Peer Review Integrity</option>
+<option>MathML / LaTeX Rendering</option>
+<option>Production Handoff</option>
+<option>Licensing &amp; Rights</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-on-surface-variant text-base pointer-events-none">unfold_more</span>
+</div>
+</div>
+<!-- Subcategory / Specific Vector -->
+<div class="md:col-span-5 flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Defect Subcategory Vector <span class="text-error">*</span></label>
+<div class="relative">
+<select class="w-full h-9 pl-space-md pr-8 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg appearance-none focus:outline-none focus:bg-surface-container">
+<option selected="">Author Affiliation &amp; ORCID Discrepancy</option>
+<option>Funding Body Grant ID Truncation</option>
+<option>Reference List Key Collision</option>
+<option>Special Issue Meta Flag Dropped</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-on-surface-variant text-base pointer-events-none">unfold_more</span>
+</div>
+</div>
+<!-- Identified Timestamp -->
+<div class="md:col-span-3 flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Identification Timestamp</label>
+<div class="relative flex items-center">
+<input class="w-full h-9 pl-space-md pr-8 bg-surface-container-low text-on-surface font-code-sm text-code-sm rounded-lg focus:outline-none focus:bg-surface-container" type="text" value="20 Oct 2026, 14:30 UTC"/>
+<span class="material-symbols-outlined absolute right-2.5 text-on-surface-variant text-base">schedule</span>
+</div>
+</div>
+<!-- Priority Matrix Selector Cards -->
+<div class="md:col-span-12 flex flex-col gap-1.5 mt-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between">
+<span>Severity Level &amp; Resolution SLA <span class="text-error">*</span></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Selected priority triggers automatic pager alert</span>
+</label>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm">
+<!-- P1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-all flex flex-col justify-between h-20">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-error flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error"></span> Critical (P1)
+                    </span>
+<span class="material-symbols-outlined text-outline text-sm">radio_button_unchecked</span>
+</div>
+<div class="mt-1">
+<div class="font-code-sm text-code-sm font-semibold text-primary">SLA: 4 Hours</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Halts publication batch</div>
+</div>
+</div>
+<!-- P2 - SELECTED -->
+<div class="p-space-sm rounded-lg bg-tertiary-fixed text-on-tertiary-fixed cursor-pointer transition-all flex flex-col justify-between h-20 ring-2 ring-on-tertiary-container shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-tertiary-container flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span> High (P2)
+                    </span>
+<span class="material-symbols-outlined text-on-tertiary-container text-base font-bold">check_circle</span>
+</div>
+<div class="mt-1">
+<div class="font-code-sm text-code-sm font-bold text-on-tertiary-fixed">SLA: 24 Hours</div>
+<div class="font-body-sm text-body-sm text-on-tertiary-fixed-variant">Deposition blocking issue</div>
+</div>
+</div>
+<!-- P3 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-all flex flex-col justify-between h-20">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-secondary flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> Medium (P3)
+                    </span>
+<span class="material-symbols-outlined text-outline text-sm">radio_button_unchecked</span>
+</div>
+<div class="mt-1">
+<div class="font-code-sm text-code-sm font-semibold text-primary">SLA: 48 Hours</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Proof discrepancy fix</div>
+</div>
+</div>
+<!-- P4 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-all flex flex-col justify-between h-20">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-outline"></span> Low (P4)
+                    </span>
+<span class="material-symbols-outlined text-outline text-sm">radio_button_unchecked</span>
+</div>
+<div class="mt-1">
+<div class="font-code-sm text-code-sm font-semibold text-primary">SLA: 5 Days</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Cosmetic editorial update</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Defect Narrative & Evidence Upload (FR-004, FR-011) -->
+<section class="space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase tracking-wider">03. Narrative &amp; Artifact Verification</span>
+<span class="font-code-sm text-code-sm text-outline">FR-004 · FR-011</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Markdown formatting supported</span>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Discrepancy Summary / Incident Title <span class="text-error">*</span></label>
+<input class="w-full h-10 px-space-md bg-surface-container-low text-primary font-body-md text-body-md font-semibold rounded-lg focus:outline-none focus:bg-surface-container" type="text" value="Author affiliation truncated and missing institutional ROR identifier during XML deposition"/>
+</div>
+<!-- Description Field with Helper Toolbar -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Reproduction Steps &amp; Technical Evidence <span class="text-error">*</span></label>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-xs font-code-sm cursor-pointer hover:bg-surface-container-high">B</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-xs font-code-sm cursor-pointer hover:bg-surface-container-high italic">I</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-xs font-code-sm cursor-pointer hover:bg-surface-container-high">&lt;/&gt;</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-xs font-code-sm cursor-pointer hover:bg-surface-container-high">List</span>
+</div>
+</div>
+<textarea class="w-full p-space-md bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg focus:outline-none focus:bg-surface-container resize-none leading-relaxed" rows="4">During CrossRef metadata packaging for manuscript DEMO-2026-002, the institutional tag `&lt;institution-id institution-id-type="ror"&gt;` was omitted in the downstream JATS-XML serializer. 
+
+1. Observed: Senior co-author Dr. Clara M. Vance shows plain string affiliation without disambiguated ROR.
+2. Expected: CrossRef query endpoint requires canonical URI: `https://ror.org/02jx3x895`.
+3. Impact: Blocks automated Open Access funder reporting under the UKRI transformative agreement.</textarea>
+</div>
+<!-- Drag and Drop Evidence Zone -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between">
+<span>Supporting Evidence Artifacts</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Accepts XML, JSON, PDF proofs, logs (Max 25MB)</span>
+</label>
+<!-- Active Uploaded Item -->
+<div class="p-space-sm bg-surface-container rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded bg-surface-container-highest text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-lg">code</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-code-sm text-code-sm font-semibold text-primary truncate">author_crossref_diff.xml (24.3 KB)</span>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant">
+<span class="text-secondary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">shield</span> Virus Scanned &amp; Checksum Verified
+                    </span>
+<span>•</span>
+<span class="font-code-sm">SHA-256: 7f8b91...</span>
+</div>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors p-1" title="Remove attachment" type="button">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+<!-- Drag Target Prompt Box -->
+<div class="p-space-md bg-surface-container-low rounded-lg flex flex-col items-center justify-center text-center cursor-pointer hover:bg-surface-container transition-colors py-4">
+<span class="material-symbols-outlined text-secondary text-2xl mb-1">cloud_upload</span>
+<span class="font-label-md text-label-md text-primary font-semibold">Drop additional XML diffs, PDF proofs, or error dumps here</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">or <span class="text-secondary underline cursor-pointer">browse file system</span></span>
+</div>
+</div>
+</section>
+<!-- 4. Attribution, Governance & Initial Assignment (FR-016, RULE-010) -->
+<section class="space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase tracking-wider">04. Attribution, Governance &amp; Assignment</span>
+<span class="font-code-sm text-code-sm text-outline">FR-016 · RULE-010</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Audit-logged action</span>
+</div>
+<!-- RULE-010 Compliance Callout Box -->
+<div class="p-space-md bg-surface-container-high rounded-lg flex items-start gap-space-md">
+<span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">policy</span>
+<div class="space-y-0.5 text-on-surface">
+<span class="font-label-md text-label-md font-bold text-primary block">RULE-010 OPERATIONAL GOVERNANCE COMPLIANCE</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Associate Editor association is logged strictly for process calibration, upstream vendor support, and systemic root-cause attribution. It does <strong class="text-on-surface font-semibold">not</strong> imply personal culpability or performance demerits.
+              </p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md">
+<!-- Handling Editor Assignment -->
+<div class="md:col-span-5 flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Handling Editor Association</label>
+<div class="relative">
+<div class="w-full h-9 px-space-md bg-surface-container-low rounded-lg flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-space-xs truncate">
+<span class="material-symbols-outlined text-on-surface-variant text-base">person</span>
+<span class="font-body-md text-body-md text-primary font-medium truncate">Prof. Alistair Finch (Associate Editor)</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-base">unfold_more</span>
+</div>
+</div>
+</div>
+<!-- Triage Assignee -->
+<div class="md:col-span-4 flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Triage Assignee <span class="text-error">*</span></label>
+<div class="relative">
+<div class="w-full h-9 px-space-md bg-surface-container-low rounded-lg flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-space-xs truncate">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-body-md text-body-md text-primary font-medium truncate">Sarah Chen (QA Lead)</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-base">unfold_more</span>
+</div>
+</div>
+</div>
+<!-- Initial Rework Estimate -->
+<div class="md:col-span-3 flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between">
+<span>Rework Est.</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hours</span>
+</label>
+<div class="relative flex items-center">
+<input class="w-full h-9 pl-space-md pr-8 bg-surface-container-low text-primary font-code-sm text-code-sm rounded-lg focus:outline-none focus:bg-surface-container" type="text" value="1.5 hrs"/>
+<span class="material-symbols-outlined absolute right-2.5 text-on-surface-variant text-base">timer</span>
+</div>
+</div>
+</div>
+</section>
+</form>
+<!-- Modal Footer (Action Toolbar & Status) -->
+<div class="shrink-0 px-space-xl py-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<!-- Telemetry & Schema Status -->
+<div class="flex items-center gap-space-xs text-on-surface-variant w-full sm:w-auto">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-code-sm text-code-sm">
+            SQLite Validation: <strong class="text-on-surface">Ready</strong> (Schema v1.2 / PRAGMA foreign_keys=ON)
+          </span>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-space-sm w-full sm:w-auto justify-end">
+<button class="px-space-md py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md font-medium" type="button">
+            Cancel
+          </button>
+<button class="px-space-md py-2 rounded-lg bg-surface-container-lowest text-primary hover:bg-surface-container transition-colors font-label-md text-label-md font-semibold shadow-sm" type="button">
+            Save as Draft
+          </button>
+<button class="px-space-lg py-2 rounded-lg bg-primary text-on-primary hover:bg-primary-container transition-all font-label-md text-label-md font-semibold flex items-center gap-space-xs shadow-md" form="discrepancy-form" type="submit">
+<span class="material-symbols-outlined text-base">send</span>
+<span>Submit Discrepancy (PED-000126)</span>
+<span class="hidden md:inline font-code-sm text-code-sm opacity-80 ml-1">⌘+Enter</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

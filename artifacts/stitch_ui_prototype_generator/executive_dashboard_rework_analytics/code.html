@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-primary-container":"#87a0cd","tertiary-fixed":"#ffdcc3","secondary-fixed":"#b5ebff","surface-tint":"#465f88","surface-container-lowest":"#ffffff","on-surface-variant":"#44474e","on-tertiary-fixed-variant":"#6e3900","on-secondary-container":"#00647b","tertiary":"#361900","surface-container-high":"#d8eaff","secondary-fixed-dim":"#7ed2ef","tertiary-container":"#552b00","inverse-primary":"#aec7f7","secondary-container":"#8ce0fd","primary":"#002046","tertiary-fixed-dim":"#ffb77d","on-secondary-fixed":"#001f28","on-primary":"#ffffff","on-secondary":"#ffffff","on-primary-fixed-variant":"#2e476f","on-tertiary":"#ffffff","surface-variant":"#cfe5fd","background":"#f7f9ff","on-primary-fixed":"#001b3d","on-background":"#061d2f","on-error":"#ffffff","on-tertiary-container":"#eb851c","surface":"#f7f9ff","on-error-container":"#93000a","surface-container":"#e3efff","inverse-on-surface":"#e8f2ff","outline-variant":"#c4c6cf","error-container":"#ffdad6","primary-fixed":"#d6e3ff","surface-bright":"#f7f9ff","primary-fixed-dim":"#aec7f7","surface-dim":"#c7dcf4","outline":"#74777f","surface-container-highest":"#cfe5fd","primary-container":"#1b365d","on-tertiary-fixed":"#2f1500","on-surface":"#061d2f","inverse-surface":"#1d3245","surface-container-low":"#edf4ff","error":"#ba1a1a","secondary":"#00677e","on-secondary-fixed-variant":"#004e60"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-xl":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem","gutter":"1rem","margin":"1rem","space-md":"0.75rem","space-lg":"1rem","gutter-lg":"1.5rem","margin-lg":"2rem","margin-md":"1.5rem"},"fontFamily":{"label-lg":["Inter"],"headline-sm":["Inter"],"label-sm":["Inter"],"body-md":["\"Source Sans 3\""],"body-sm":["\"Source Sans 3\""],"display-lg":["Inter"],"code-sm":["JetBrains Mono"],"headline-lg-mobile":["Inter"],"body-lg":["\"Source Sans 3\""],"headline-md":["Inter"],"headline-lg":["Inter"],"label-md":["Inter"]},"fontSize":{"label-lg":["14px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"600"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"code-sm":["11px",{"lineHeight":"16px","fontWeight":"500"}],"headline-lg-mobile":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-md":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface min-h-screen selection:bg-secondary-container selection:text-on-secondary-container"><header class="fixed top-0 left-0 right-0 h-16 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50"><div class="w-full h-16 px-gutter-lg flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md shrink-0"><img alt="Taylor &amp; Francis Tracker Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UpD-23D_mgy0CPURUmO4aZuI4T_I0HlUxfw_O5fRg2WaPNzu6e6fnsYsp6vlNM4LVsuhcoe-jxzO1KFzewDAD-QljGu-EP2UUpoCJPZ_IelziZ0REIUHWN_bLWb3AH9PVDOgzI_iA_3bSAM3xFaSd-R-EwLejyiJOPzSYbexCUOXFzL-U5ZDreKq7m5YCpe7Gh77707KejevvXvyHtvHwUaDJsdNetKBv1jgZ8iu7LQ35bvgblXY6G3_g5"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">Taylor &amp; Francis</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Discrepancy Tracker</span></div><div class="h-6 w-px bg-outline-variant mx-space-xs hidden sm:block"></div><div class="hidden lg:flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded text-on-surface-variant cursor-pointer hover:bg-surface-container hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-sm">menu_book</span><span class="font-label-md text-label-md">All Active Journals (142)</span><span class="material-symbols-outlined text-xs">arrow_drop_down</span></div><div class="hidden xl:flex items-center gap-space-xs bg-surface-container px-space-xs py-0.5 rounded font-code-sm text-code-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span>SQLite Production v1.2</span></div></div><div class="flex-1 max-w-md mx-gutter hidden md:block"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-3 text-outline text-base">search</span><input class="w-full h-8 pl-9 pr-3 bg-surface-container-lowest text-on-surface font-body-sm text-body-sm rounded border border-outline-variant placeholder:text-outline focus:outline-none focus:border-secondary" placeholder="Search Discrepancy ID, Manuscript Ref, DOI..." type="text"/></div></div><div class="flex items-center gap-space-md shrink-0"><button class="inline-flex items-center gap-space-xs bg-primary text-on-primary hover:bg-primary-container px-space-sm py-1.5 rounded font-label-md text-label-md transition-colors shadow-sm" type="button"><span class="material-symbols-outlined text-sm">add</span><span>Log Discrepancy</span></button><div class="relative cursor-pointer p-1 rounded hover:bg-surface-container-high transition-colors text-on-surface-variant"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-0 right-0 w-4 h-4 bg-error text-on-error font-label-sm text-label-sm rounded-full flex items-center justify-center font-bold">4</span></div><div class="h-6 w-px bg-outline-variant"></div><div class="flex items-center gap-space-sm cursor-pointer hover:bg-surface-container px-space-xs py-1 rounded transition-colors"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgZtJ3RB5fAKCbBO8OqISBg6VX4FKMgpBlPXNEWt279xqffyQBOOveGrmKlu74KsXC7aVvhTfmpqLSPPDl0aFYOzF-snaD5y921G24fY09NJb9DWjEE7fpRPNWv0pWIAJ2KmyWfIz4jQKIIB7JZgjCizvc5LbQ5CDsA1s0_2jB0uJB0KL3NpZ4YlGdvo6bSQGKKnhbHPEGdU7AusunrfRwI2pxDiNolj8k1HsBOJmB737Ue5aoqbuHRg"/><div class="hidden xl:flex flex-col text-left leading-tight"><span class="font-label-md text-label-md text-on-surface font-semibold">Dr. Eleanor Vance</span><span class="font-label-sm text-label-sm text-on-surface-variant">Editorial Ops Director</span></div><span class="material-symbols-outlined text-outline text-sm hidden xl:block">expand_more</span></div></div></div></header><aside class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-64 bg-surface-container-lowest border-r border-outline-variant z-40 flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-lg"><div class="px-space-md"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Editorial Operations</span></div><nav class="flex flex-col gap-1 px-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-sm"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 rounded transition-colors bg-primary-container text-on-primary-container font-semibold shadow-sm" data-path="executive-dashboard" href="#"><span class="material-symbols-outlined text-lg">dashboard</span><span>Executive Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="discrepancy-register" href="#"><span class="material-symbols-outlined text-lg">checklist_rtl</span><span>Discrepancy Register</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="discrepancy-detail-workflow" href="#"><span class="material-symbols-outlined text-lg">rule_settings</span><span>Detail &amp; Workflow</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="rework-analytics" href="#"><span class="material-symbols-outlined text-lg">query_stats</span><span>Rework &amp; Analytics</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="admin-taxonomy" href="#"><span class="material-symbols-outlined text-lg">tune</span><span>Admin &amp; Taxonomy</span></a></nav></div><div class="px-space-md py-space-sm border-t border-outline-variant"><div class="flex items-center justify-between text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-sm text-secondary">lock_clock</span><span class="font-label-sm text-label-sm uppercase">Sync Cycle: 4m ago</span></div><span class="font-code-sm text-code-sm text-outline">DB OK</span></div></div></aside><div class="pl-64"><main class="pt-16 min-h-screen bg-surface"><div class="bg-surface-container-low border-b border-outline-variant px-gutter-lg py-space-xs"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><span class="cursor-pointer hover:text-on-surface transition-colors">Editorial Operations</span><span class="material-symbols-outlined text-xs">chevron_right</span><span class="text-on-surface font-semibold">Taylor &amp; Francis Global Tracker</span></div><div class="flex items-center gap-space-sm"><span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>Real-time Telemetry Active</span></div></div></div><div class="w-full px-gutter-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- Dynamic Operational Telemetry / Banner Area -->
+<div class="mb-space-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm bg-surface-container-low p-space-md rounded-xl shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl">analytics</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-primary tracking-tight">Executive Discrepancy &amp; Rework Intelligence</span>
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-space-xs py-0.5 rounded uppercase tracking-wider">FRD v5.6 • Sec 8</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Scholarly publication pipeline triage, rework cost impact, and systemic defect mitigation audit.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-end md:self-auto">
+<button class="inline-flex items-center gap-space-xs bg-surface-container-lowest text-on-surface hover:bg-surface-container px-space-md py-1.5 rounded font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-sm text-secondary">file_download</span>
+<span>Export Exec Brief (PDF)</span>
+</button>
+<button class="inline-flex items-center gap-space-xs bg-primary text-on-primary hover:bg-primary-container px-space-md py-1.5 rounded font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-sm">tune</span>
+<span>Audit Taxonomy Config</span>
+</button>
+</div>
+</div>
+<!-- KPI Summary 4-Card Row -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-gutter mb-space-xl">
+<!-- Card 1: Total Discrepancies -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-24 h-24 -mr-6 -mt-6 bg-secondary-fixed/30 rounded-full blur-2xl group-hover:scale-125 transition-transform pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Total Discrepancies</span>
+<span class="material-symbols-outlined text-primary text-lg">checklist_rtl</span>
+</div>
+<div class="flex items-baseline gap-space-sm mt-space-xs">
+<span class="font-display-lg text-display-lg text-primary tracking-tight">348</span>
+<div class="inline-flex items-center gap-0.5 font-label-sm text-label-sm text-error bg-error-container/60 px-space-xs py-0.5 rounded">
+<span class="material-symbols-outlined text-xs">arrow_upward</span>
+<span>+12% vs L/M</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span><strong class="text-on-surface font-semibold">42</strong> Open</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span><strong class="text-on-surface font-semibold">22</strong> Triaged</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-surface-tint"></span>
+<span><strong class="text-on-surface font-semibold">284</strong> Resolved</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Total Rework Hours -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-24 h-24 -mr-6 -mt-6 bg-secondary-container/40 rounded-full blur-2xl group-hover:scale-125 transition-transform pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Total Rework Time</span>
+<span class="material-symbols-outlined text-secondary text-lg">schedule</span>
+</div>
+<div class="flex items-baseline gap-space-sm mt-space-xs">
+<span class="font-display-lg text-display-lg text-primary tracking-tight">1,482.5<span class="text-headline-md font-label-lg font-normal text-on-surface-variant ml-1">hrs</span></span>
+<div class="inline-flex items-center gap-0.5 font-label-sm text-label-sm text-secondary bg-secondary-fixed/50 px-space-xs py-0.5 rounded">
+<span class="material-symbols-outlined text-xs">arrow_downward</span>
+<span>-8.4% cost trend</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">SUM(rework_hrs)</span>
+<span class="bg-surface-container px-space-xs py-0.5 rounded text-on-surface font-code-sm text-code-sm">avg 4.25 hrs / defect</span>
+</div>
+</div>
+<!-- Card 3: Top Defect Category -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-24 h-24 -mr-6 -mt-6 bg-tertiary-fixed/30 rounded-full blur-2xl group-hover:scale-125 transition-transform pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Top Defect Category</span>
+<span class="material-symbols-outlined text-on-tertiary-container text-lg">rule_folder</span>
+</div>
+<div class="mt-space-xs">
+<div class="font-headline-md text-headline-md text-primary truncate" title="Manuscript Metadata">Manuscript Metadata</div>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-headline-lg text-headline-lg text-primary">38%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">of total discrepancy volume</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Total Rework Incurred:</span>
+<span class="font-code-sm text-code-sm font-semibold text-primary bg-tertiary-fixed/60 px-space-xs py-0.5 rounded">563.0 rework hrs</span>
+</div>
+</div>
+<!-- Card 4: Most Impacted Journal -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-24 h-24 -mr-6 -mt-6 bg-error-container/30 rounded-full blur-2xl group-hover:scale-125 transition-transform pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Most Impacted Journal</span>
+<span class="material-symbols-outlined text-error text-lg">emergency_home</span>
+</div>
+<div class="mt-space-xs">
+<div class="font-headline-md text-headline-md text-primary truncate" title="Journal of Applied Bioscience">J. Applied Bioscience</div>
+<div class="flex items-center gap-space-sm mt-1">
+<span class="font-code-sm text-code-sm bg-surface-container text-on-surface px-1.5 py-0.5 rounded font-bold">JAB</span>
+<span class="font-label-md text-label-md text-error font-semibold">3.8% Discrepancy Rate</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span><strong class="text-primary font-semibold">48</strong> defects logged</span>
+<span class="font-code-sm text-code-sm text-error font-bold">194.0 rework hrs</span>
+</div>
+</div>
+</div>
+<!-- Operational Filter Toolbar -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm mb-space-lg flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex flex-wrap items-center gap-space-md">
+<!-- Period Selector Toggle -->
+<div class="flex items-center bg-surface-container-low p-0.5 rounded-lg">
+<button class="px-space-md py-1 rounded-md font-label-sm text-label-sm transition-all bg-surface-container-lowest text-primary shadow-sm font-semibold" type="button">Last 90 Days</button>
+<button class="px-space-md py-1 rounded-md font-label-sm text-label-sm transition-all text-on-surface-variant hover:text-on-surface" type="button">Current Quarter</button>
+<button class="px-space-md py-1 rounded-md font-label-sm text-label-sm transition-all text-on-surface-variant hover:text-on-surface" type="button">Custom Range</button>
+</div>
+<!-- Journal Selector -->
+<div class="flex items-center gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider" for="select-journal">Journal:</label>
+<div class="relative">
+<select class="appearance-none bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-space-sm pr-space-xl py-1.5 rounded focus:outline-none focus:bg-surface-container cursor-pointer font-medium" id="select-journal">
+<option selected="">All Journals (142 Active)</option>
+<option>Journal of Applied Bioscience (JAB)</option>
+<option>International Medical Review (IMR)</option>
+<option>Journal of Materials Chemistry (JMC)</option>
+<option>Nordic Educational Research (NER)</option>
+</select>
+<span class="material-symbols-outlined text-xs absolute right-2 top-2.5 pointer-events-none text-outline">expand_more</span>
+</div>
+</div>
+<!-- Severity Filter -->
+<div class="flex items-center gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider" for="select-severity">Severity:</label>
+<div class="relative">
+<select class="appearance-none bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-space-sm pr-space-xl py-1.5 rounded focus:outline-none focus:bg-surface-container cursor-pointer font-medium" id="select-severity">
+<option selected="">All Severities</option>
+<option>Critical (Severity 1)</option>
+<option>Major (Severity 2)</option>
+<option>Moderate (Severity 3)</option>
+<option>Minor / Cosmetic (Severity 4)</option>
+</select>
+<span class="material-symbols-outlined text-xs absolute right-2 top-2.5 pointer-events-none text-outline">expand_more</span>
+</div>
+</div>
+<!-- Status Filter -->
+<div class="flex items-center gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider" for="select-status">Status:</label>
+<div class="relative">
+<select class="appearance-none bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-space-sm pr-space-xl py-1.5 rounded focus:outline-none focus:bg-surface-container cursor-pointer font-medium" id="select-status">
+<option selected="">All Defect States</option>
+<option>Open / Unassigned (42)</option>
+<option>In Triage &amp; Assessment (22)</option>
+<option>Author Review Pending (18)</option>
+<option>Resolved &amp; Closed (284)</option>
+</select>
+<span class="material-symbols-outlined text-xs absolute right-2 top-2.5 pointer-events-none text-outline">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Quick Reset and Saved View -->
+<div class="flex items-center gap-space-sm">
+<span class="font-code-sm text-code-sm text-on-surface-variant">Live Filter: <strong>Global Editorial Scope</strong></span>
+<button class="text-secondary hover:text-on-secondary-container p-1 rounded hover:bg-surface-container transition-colors" title="Reset Filters" type="button">
+<span class="material-symbols-outlined text-base">refresh</span>
+</button>
+</div>
+</div>
+<!-- Main Analytics Grid: Trends + Root Cause Distribution -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-space-xl">
+<!-- Left Panel: Rework Trend (8 Cols) -->
+<div class="lg:col-span-7 xl:col-span-8 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-md gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-primary">Rework &amp; Discrepancy Volumetric Trend</span>
+<span class="font-code-sm text-code-sm bg-surface-container-low text-secondary px-1.5 py-0.5 rounded">May – Oct 2026</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Discrepancy count (bars) correlated against operational rework hours absorbed (spline line).</p>
+</div>
+<!-- Legend -->
+<div class="flex items-center gap-space-md font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-sm bg-primary-container"></span>
+<span class="text-on-surface">Defects Logged</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-1 bg-secondary rounded-full"></span>
+<span class="text-on-surface">Rework Hours</span>
+</div>
+</div>
+</div>
+<!-- Styled Interactive SVG Trend Chart -->
+<div class="relative w-full h-64 bg-surface-container-low/40 rounded-lg p-space-md flex flex-col justify-between">
+<!-- SVG Visualizer -->
+<svg class="w-full h-44 overflow-visible" preserveaspectratio="none" viewbox="0 0 700 200">
+<!-- Subtle Grid Lines -->
+<line class="text-surface-container stroke-1" stroke="currentColor" stroke-dasharray="4,4" x1="0" x2="700" y1="20" y2="20"></line>
+<line class="text-surface-container stroke-1" stroke="currentColor" stroke-dasharray="4,4" x1="0" x2="700" y1="70" y2="70"></line>
+<line class="text-surface-container stroke-1" stroke="currentColor" stroke-dasharray="4,4" x1="0" x2="700" y1="120" y2="120"></line>
+<line class="text-surface-container stroke-1" stroke="currentColor" x1="0" x2="700" y1="170" y2="170"></line>
+<!-- Bars: May, Jun, Jul, Aug, Sep, Oct (Centers approx 60, 175, 290, 405, 520, 635) -->
+<!-- May: Count 58, Rework 280h -->
+<rect class="fill-primary-container hover:fill-primary transition-all cursor-pointer opacity-90" height="95" rx="3" width="36" x="42" y="75"></rect>
+<!-- Jun: Count 64, Rework 310h -->
+<rect class="fill-primary-container hover:fill-primary transition-all cursor-pointer opacity-90" height="110" rx="3" width="36" x="157" y="60"></rect>
+<!-- Jul: Count 72, Rework 365h -->
+<rect class="fill-primary-container hover:fill-primary transition-all cursor-pointer opacity-90" height="128" rx="3" width="36" x="272" y="42"></rect>
+<!-- Aug: Count 54, Rework 230h -->
+<rect class="fill-primary-container hover:fill-primary transition-all cursor-pointer opacity-90" height="85" rx="3" width="36" x="387" y="85"></rect>
+<!-- Sep: Count 48, Rework 190h -->
+<rect class="fill-primary-container hover:fill-primary transition-all cursor-pointer opacity-90" height="72" rx="3" width="36" x="502" y="98"></rect>
+<!-- Oct: Count 52, Rework 107.5h (partial) -->
+<rect class="fill-primary hover:fill-primary-container transition-all cursor-pointer" height="82" rx="3" width="36" x="617" y="88"></rect>
+<!-- Trend Spline Line (Rework Hours) -->
+<path class="text-secondary stroke-2" d="M 60 70 Q 175 45, 290 28 T 405 92 T 520 114 T 635 125" fill="none" stroke="currentColor"></path>
+<!-- Data Points on Spline -->
+<circle class="fill-surface-container-lowest stroke-secondary stroke-2" cx="60" cy="70" r="4.5"></circle>
+<circle class="fill-surface-container-lowest stroke-secondary stroke-2" cx="175" cy="45" r="4.5"></circle>
+<circle class="fill-surface-container-lowest stroke-secondary stroke-2" cx="290" cy="28" r="5"></circle>
+<circle class="fill-surface-container-lowest stroke-secondary stroke-2" cx="405" cy="92" r="4.5"></circle>
+<circle class="fill-surface-container-lowest stroke-secondary stroke-2" cx="520" cy="114" r="4.5"></circle>
+<circle class="fill-secondary-container stroke-secondary stroke-2" cx="635" cy="125" r="5.5"></circle>
+<!-- Callout Tag on Peak Month (July) -->
+<g transform="translate(260, 2)">
+<rect class="fill-primary" height="20" rx="3" width="60" x="0" y="0"></rect>
+<text fill="#ffffff" font-family="Inter" font-size="10" font-weight="600" text-anchor="middle" x="30" y="14">365 hrs</text>
+</g>
+</svg>
+<!-- X-Axis Labels -->
+<div class="grid grid-cols-6 text-center font-label-md text-label-md text-on-surface-variant pt-2">
+<div>May '26</div>
+<div>Jun '26</div>
+<div class="font-bold text-primary">Jul '26 (Peak)</div>
+<div>Aug '26</div>
+<div>Sep '26</div>
+<div class="font-bold text-secondary">Oct '26 (Current)</div>
+</div>
+</div>
+<!-- Footer Micro-Insights -->
+<div class="mt-space-md flex flex-wrap items-center justify-between gap-space-sm pt-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-sm">trending_down</span>
+<span>Rework load decreased by <strong>41.2%</strong> following Stage-2 CrossRef automated schema validation rollout in August.</span>
+</div>
+<span class="font-code-sm text-code-sm text-outline">Telemetry: Daily Aggregate Synced</span>
+</div>
+</div>
+<!-- Right Panel: Root Cause Distribution (4 Cols) -->
+<div class="lg:col-span-5 xl:col-span-4 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-headline-sm text-headline-sm text-primary">Root Cause Distribution</span>
+<span class="material-symbols-outlined text-outline text-base">pie_chart</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Hierarchical error attribution across active production work streams.</p>
+<!-- Progress Bars Taxonomy Breakdown -->
+<div class="space-y-space-md">
+<!-- Cause 1: Data Quality (34%) -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-primary"></span>
+<span class="text-on-surface font-semibold">Data Quality</span>
+<span class="font-code-sm text-code-sm text-outline bg-surface-container-low px-1 py-0.2 rounded">TAX-DQ-01</span>
+</div>
+<span class="font-code-sm text-code-sm font-bold text-primary">34% (118)</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 34%"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Mainly: XML entities &amp; Author ORCID formats</span>
+<span class="font-code-sm text-code-sm">504.0 hrs</span>
+</div>
+</div>
+<!-- Cause 2: Process Gap (26%) -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-secondary"></span>
+<span class="text-on-surface font-semibold">Process Gap</span>
+<span class="font-code-sm text-code-sm text-outline bg-surface-container-low px-1 py-0.2 rounded">TAX-PG-04</span>
+</div>
+<span class="font-code-sm text-code-sm font-bold text-primary">26% (90)</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 26%"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Handoff delays between Typesetter &amp; Copyedit</span>
+<span class="font-code-sm text-code-sm">385.5 hrs</span>
+</div>
+</div>
+<!-- Cause 3: Training Gap (18%) -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-surface-tint"></span>
+<span class="text-on-surface font-semibold">Training Gap</span>
+<span class="font-code-sm text-code-sm text-outline bg-surface-container-low px-1 py-0.2 rounded">TAX-TG-02</span>
+</div>
+<span class="font-code-sm text-code-sm font-bold text-primary">18% (63)</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-surface-tint h-full rounded-full" style="width: 18%"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Junior desk editor citation style misalignment</span>
+<span class="font-code-sm text-code-sm">266.8 hrs</span>
+</div>
+</div>
+<!-- Cause 4: System Defect (12%) -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-error"></span>
+<span class="text-on-surface font-semibold">System Defect</span>
+<span class="font-code-sm text-code-sm text-outline bg-surface-container-low px-1 py-0.2 rounded">TAX-SD-09</span>
+</div>
+<span class="font-code-sm text-code-sm font-bold text-primary">12% (42)</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 12%"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Ingestion microservice schema validation drop</span>
+<span class="font-code-sm text-code-sm">178.0 hrs</span>
+</div>
+</div>
+<!-- Cause 5: Communication Gap (10%) -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-on-tertiary-container"></span>
+<span class="text-on-surface font-semibold">Communication Gap</span>
+<span class="font-code-sm text-code-sm text-outline bg-surface-container-low px-1 py-0.2 rounded">TAX-CG-03</span>
+</div>
+<span class="font-code-sm text-code-sm font-bold text-primary">10% (35)</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-on-tertiary-container h-full rounded-full" style="width: 10%"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Corresponding author query response latency</span>
+<span class="font-code-sm text-code-sm">148.2 hrs</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Taxonomy Quick Filter Chips -->
+<div class="mt-space-lg pt-space-md border-t border-surface-container">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-space-xs">Root Cause Taxonomy Tags:</span>
+<div class="flex flex-wrap gap-1">
+<span class="bg-surface-container text-on-surface font-code-sm text-code-sm px-2 py-0.5 rounded cursor-pointer hover:bg-surface-container-high transition-colors">Metadata &gt; CrossRef</span>
+<span class="bg-surface-container text-on-surface font-code-sm text-code-sm px-2 py-0.5 rounded cursor-pointer hover:bg-surface-container-high transition-colors">Figures &gt; DPI Low</span>
+<span class="bg-surface-container text-on-surface font-code-sm text-code-sm px-2 py-0.5 rounded cursor-pointer hover:bg-surface-container-high transition-colors">Legal &gt; CC-BY-NC</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Split Section: Top Journals Table + Recent High-Severity Alerts -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter mb-space-lg">
+<!-- Top Journals by Rework Hours Table (7 Cols) -->
+<div class="xl:col-span-7 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-primary">Top Journals by Rework Hours</span>
+<span class="font-label-sm text-label-sm bg-surface-container px-space-xs py-0.5 rounded text-on-surface-variant">Ranked by Operational Friction</span>
+</div>
+<a class="font-label-md text-label-md text-secondary hover:text-on-secondary-container inline-flex items-center gap-1 transition-colors" href="#">
+<span>View All 142 Journals</span>
+<span class="material-symbols-outlined text-xs">arrow_forward</span>
+</a>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-md text-label-md h-9">
+<th class="px-space-md py-1.5 font-semibold rounded-l">Code</th>
+<th class="px-space-md py-1.5 font-semibold">Journal Name</th>
+<th class="px-space-md py-1.5 font-semibold text-right">Active MSS</th>
+<th class="px-space-md py-1.5 font-semibold text-right">Discrepancies</th>
+<th class="px-space-md py-1.5 font-semibold text-right">Total Rework</th>
+<th class="px-space-md py-1.5 font-semibold text-center">Trend</th>
+<th class="px-space-md py-1.5 font-semibold text-center rounded-r">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-md text-body-md">
+<!-- Row 1: JAB -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-space-md py-2.5 font-code-sm text-code-sm font-bold text-primary">JAB</td>
+<td class="px-space-md py-2.5">
+<div class="font-semibold text-on-surface">Journal of Applied Bioscience</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Life Sciences • Impact Factor 4.2</div>
+</td>
+<td class="px-space-md py-2.5 text-right font-code-sm text-code-sm">1,260</td>
+<td class="px-space-md py-2.5 text-right">
+<span class="font-code-sm text-code-sm font-bold text-error">48</span>
+<span class="text-label-sm text-on-surface-variant block font-normal">3.8% rate</span>
+</td>
+<td class="px-space-md py-2.5 text-right font-code-sm text-code-sm font-bold text-primary">194.0 hrs</td>
+<td class="px-space-md py-2.5 text-center">
+<span class="inline-flex items-center text-error font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm">trending_up</span>+14%
+                  </span>
+</td>
+<td class="px-space-md py-2.5 text-center">
+<button class="p-1 rounded bg-surface-container text-primary hover:bg-primary hover:text-on-primary transition-colors" title="Drill Down JAB Details" type="button">
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: IMR -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-space-md py-2.5 font-code-sm text-code-sm font-bold text-primary">IMR</td>
+<td class="px-space-md py-2.5">
+<div class="font-semibold text-on-surface">International Medical Review</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Clinical Medicine • Impact Factor 6.8</div>
+</td>
+<td class="px-space-md py-2.5 text-right font-code-sm text-code-sm">940</td>
+<td class="px-space-md py-2.5 text-right">
+<span class="font-code-sm text-code-sm font-bold text-on-surface">36</span>
+<span class="text-label-sm text-on-surface-variant block font-normal">3.1% rate</span>
+</td>
+<td class="px-space-md py-2.5 text-right font-code-sm text-code-sm font-bold text-primary">152.5 hrs</td>
+<td class="px-space-md py-2.5 text-center">
+<span class="inline-flex items-center text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm">trending_down</span>-6%
+                  </span>
+</td>
+<td class="px-space-md py-2.5 text-center">
+<button class="p-1 rounded bg-surface-container text-primary hover:bg-primary hover:text-on-primary transition-colors" title="Drill Down IMR Details" type="button">
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: JMC -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-space-md py-2.5 font-code-sm text-code-sm font-bold text-primary">JMC</td>
+<td class="px-space-md py-2.5">
+<div class="font-semibold text-on-surface">Journal of Materials Chemistry</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Physical Sciences • Impact Factor 5.1</div>
+</td>
+<td class="px-space-md py-2.5 text-right font-code-sm text-code-sm">815</td>
+<td class="px-space-md py-2.5 text-right">
+<span class="font-code-sm text-code-sm font-bold text-on-surface">29</span>
+<span class="text-label-sm text-on-surface-variant block font-normal">2.8% rate</span>
+</td>
+<td class="px-space-md py-2.5 text-right font-code-sm text-code-sm font-bold text-primary">128.0 hrs</td>
+<td class="px-space-md py-2.5 text-center">
+<span class="inline-flex items-center text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm">trending_flat</span>0%
+                  </span>
+</td>
+<td class="px-space-md py-2.5 text-center">
+<button class="p-1 rounded bg-surface-container text-primary hover:bg-primary hover:text-on-primary transition-colors" title="Drill Down JMC Details" type="button">
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: NER -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-space-md py-2.5 font-code-sm text-code-sm font-bold text-primary">NER</td>
+<td class="px-space-md py-2.5">
+<div class="font-semibold text-on-surface">Nordic Educational Research</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Social Sciences • Impact Factor 2.3</div>
+</td>
+<td class="px-space-md py-2.5 text-right font-code-sm text-code-sm">520</td>
+<td class="px-space-md py-2.5 text-right">
+<span class="font-code-sm text-code-sm font-bold text-on-surface">17</span>
+<span class="text-label-sm text-on-surface-variant block font-normal">2.1% rate</span>
+</td>
+<td class="px-space-md py-2.5 text-right font-code-sm text-code-sm font-bold text-primary">74.5 hrs</td>
+<td class="px-space-md py-2.5 text-center">
+<span class="inline-flex items-center text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm">trending_down</span>-12%
+                  </span>
+</td>
+<td class="px-space-md py-2.5 text-center">
+<button class="p-1 rounded bg-surface-container text-primary hover:bg-primary hover:text-on-primary transition-colors" title="Drill Down NER Details" type="button">
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-surface-container flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Displaying Top 4 of 142 Active Titles</span>
+<span class="font-code-sm text-code-sm">Formula: Discrepancy Rate = Defect_Count / Total_MSS_Logged</span>
+</div>
+</div>
+<!-- Recent High-Severity Alerts List (5 Cols) -->
+<div class="xl:col-span-5 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-error animate-ping"></span>
+<span class="font-headline-sm text-headline-sm text-primary">Critical Discrepancies Requiring Triage</span>
+</div>
+<span class="bg-error-container text-error font-label-sm text-label-sm px-space-xs py-0.5 rounded font-bold">4 S1 / S2 Urgent</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Live escalations bypassing standard auto-remediation thresholds.</p>
+<!-- Alert Items Container -->
+<div class="space-y-space-sm">
+<!-- Alert 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors border-l-4 border-error">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-code-sm text-code-sm font-bold text-error">DISC-2026-0941</span>
+<span class="font-label-sm text-label-sm uppercase bg-error-container text-error px-1 py-0.2 rounded font-bold">Severity 1</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">JAB-2026-4410.R2</span>
+</div>
+<div class="font-label-md text-label-md text-on-surface mt-1 font-semibold">Author Affiliation Discrepancy post-acceptance XML validation</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Discovered via CrossRef API: Corrupted institutional ROR ID mapping.</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-code-sm text-code-sm text-error font-bold">6.5 hrs est.</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">14m ago</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-space-sm pt-space-xs border-t border-surface-container">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Assigned: <strong class="text-on-surface">Dr. Eleanor Vance</strong></span>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-xs py-0.5 rounded font-label-sm text-label-sm text-secondary hover:bg-surface-container-highest transition-colors font-medium" type="button">Assign Desk</button>
+<button class="px-space-sm py-0.5 rounded font-label-sm text-label-sm bg-primary text-on-primary hover:bg-primary-container transition-colors font-medium" type="button">Quick Triage</button>
+</div>
+</div>
+</div>
+<!-- Alert 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors border-l-4 border-on-tertiary-container">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-code-sm text-code-sm font-bold text-on-tertiary-container">DISC-2026-0887</span>
+<span class="font-label-sm text-label-sm uppercase bg-tertiary-fixed text-on-tertiary-fixed-variant px-1 py-0.2 rounded font-bold">Severity 2</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">IMR-2026-1029</span>
+</div>
+<div class="font-label-md text-label-md text-on-surface mt-1 font-semibold">Figure 4 Clinical Radiograph resolution mismatch &lt; 300 DPI</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Print production halt. Author proofing flagged unreadable lesion annotation.</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-code-sm text-code-sm text-on-tertiary-container font-bold">4.0 hrs est.</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1h ago</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-space-sm pt-space-xs border-t border-surface-container">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Assigned: <strong class="text-on-surface">Production Desk B</strong></span>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-xs py-0.5 rounded font-label-sm text-label-sm text-secondary hover:bg-surface-container-highest transition-colors font-medium" type="button">Request Asset</button>
+<button class="px-space-sm py-0.5 rounded font-label-sm text-label-sm bg-primary text-on-primary hover:bg-primary-container transition-colors font-medium" type="button">Quick Triage</button>
+</div>
+</div>
+</div>
+<!-- Alert 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors border-l-4 border-on-tertiary-container">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-code-sm text-code-sm font-bold text-on-tertiary-container">DISC-2026-0882</span>
+<span class="font-label-sm text-label-sm uppercase bg-tertiary-fixed text-on-tertiary-fixed-variant px-1 py-0.2 rounded font-bold">Severity 2</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">JMC-2026-8802</span>
+</div>
+<div class="font-label-md text-label-md text-on-surface mt-1 font-semibold">Missing Open Access License Mandate Clause (UKRI Grant)</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">License agreement ingested as Standard Copyright instead of CC-BY 4.0.</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-code-sm text-code-sm text-on-tertiary-container font-bold">3.5 hrs est.</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3h ago</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-space-sm pt-space-xs border-t border-surface-container">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Assigned: <strong class="text-on-surface">Licensing Lead (Auto)</strong></span>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-xs py-0.5 rounded font-label-sm text-label-sm text-secondary hover:bg-surface-container-highest transition-colors font-medium" type="button">Re-send Form</button>
+<button class="px-space-sm py-0.5 rounded font-label-sm text-label-sm bg-primary text-on-primary hover:bg-primary-container transition-colors font-medium" type="button">Quick Triage</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-surface-container flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">SLA Countdown: Auto-escalate at 4h mark</span>
+<button class="font-label-md text-label-md text-secondary hover:text-on-secondary-container font-medium flex items-center gap-1" type="button">
+<span>Go to Live Queue</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Mandatory Institutional Attribution Rule Disclaimer Banner (RULE-010) -->
+<div class="w-full bg-surface-container-low p-space-md rounded-xl shadow-sm flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-lg">info</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-primary font-bold">Policy &amp; Compliance Attribution Notice:</span>
+<span class="font-code-sm text-code-sm bg-surface-container px-1.5 py-0.2 rounded font-semibold text-on-surface-variant">Rule RULE-010</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+<strong>Note:</strong> Editor and production specialist association is tracked strictly for macro process improvement, root-cause taxonomy calibration, and pipeline capacity modeling. In compliance with internal governance mandate Section 8, this metric does not imply individual fault or disciplinary assessment.
+      </p>
+</div>
+</div>
+</div>
+<script>
+  // Micro-interactions for interactive filter adjustments
+  document.querySelectorAll('#select-journal, #select-severity, #select-status').forEach(select => {
+    select.addEventListener('change', (e) => {
+      const banner = document.querySelector('p.font-body-sm');
+      if (banner) {
+        banner.style.opacity = '0.6';
+        setTimeout(() => {
+          banner.style.opacity = '1';
+        }, 150);
+      }
+    });
+  });
+</script></div></main></div></body></html>

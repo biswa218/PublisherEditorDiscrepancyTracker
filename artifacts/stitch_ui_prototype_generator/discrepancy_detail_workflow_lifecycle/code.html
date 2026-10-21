@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-primary-container":"#87a0cd","tertiary-fixed":"#ffdcc3","secondary-fixed":"#b5ebff","surface-tint":"#465f88","surface-container-lowest":"#ffffff","on-surface-variant":"#44474e","on-tertiary-fixed-variant":"#6e3900","on-secondary-container":"#00647b","tertiary":"#361900","surface-container-high":"#d8eaff","secondary-fixed-dim":"#7ed2ef","tertiary-container":"#552b00","inverse-primary":"#aec7f7","secondary-container":"#8ce0fd","primary":"#002046","tertiary-fixed-dim":"#ffb77d","on-secondary-fixed":"#001f28","on-primary":"#ffffff","on-secondary":"#ffffff","on-primary-fixed-variant":"#2e476f","on-tertiary":"#ffffff","surface-variant":"#cfe5fd","background":"#f7f9ff","on-primary-fixed":"#001b3d","on-background":"#061d2f","on-error":"#ffffff","on-tertiary-container":"#eb851c","surface":"#f7f9ff","on-error-container":"#93000a","surface-container":"#e3efff","inverse-on-surface":"#e8f2ff","outline-variant":"#c4c6cf","error-container":"#ffdad6","primary-fixed":"#d6e3ff","surface-bright":"#f7f9ff","primary-fixed-dim":"#aec7f7","surface-dim":"#c7dcf4","outline":"#74777f","surface-container-highest":"#cfe5fd","primary-container":"#1b365d","on-tertiary-fixed":"#2f1500","on-surface":"#061d2f","inverse-surface":"#1d3245","surface-container-low":"#edf4ff","error":"#ba1a1a","secondary":"#00677e","on-secondary-fixed-variant":"#004e60"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-xl":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem","gutter":"1rem","margin":"1rem","space-md":"0.75rem","space-lg":"1rem","gutter-lg":"1.5rem","margin-lg":"2rem","margin-md":"1.5rem"},"fontFamily":{"label-lg":["Inter"],"headline-sm":["Inter"],"label-sm":["Inter"],"body-md":["\"Source Sans 3\""],"body-sm":["\"Source Sans 3\""],"display-lg":["Inter"],"code-sm":["JetBrains Mono"],"headline-lg-mobile":["Inter"],"body-lg":["\"Source Sans 3\""],"headline-md":["Inter"],"headline-lg":["Inter"],"label-md":["Inter"]},"fontSize":{"label-lg":["14px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"600"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"code-sm":["11px",{"lineHeight":"16px","fontWeight":"500"}],"headline-lg-mobile":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-md":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface min-h-screen selection:bg-secondary-container selection:text-on-secondary-container"><header class="fixed top-0 left-0 right-0 h-16 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50"><div class="w-full h-16 px-gutter-lg flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md shrink-0"><img alt="Taylor &amp; Francis Tracker Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UpD-23D_mgy0CPURUmO4aZuI4T_I0HlUxfw_O5fRg2WaPNzu6e6fnsYsp6vlNM4LVsuhcoe-jxzO1KFzewDAD-QljGu-EP2UUpoCJPZ_IelziZ0REIUHWN_bLWb3AH9PVDOgzI_iA_3bSAM3xFaSd-R-EwLejyiJOPzSYbexCUOXFzL-U5ZDreKq7m5YCpe7Gh77707KejevvXvyHtvHwUaDJsdNetKBv1jgZ8iu7LQ35bvgblXY6G3_g5"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">Taylor &amp; Francis</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Discrepancy Tracker</span></div><div class="h-6 w-px bg-outline-variant mx-space-xs hidden sm:block"></div><div class="hidden lg:flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded text-on-surface-variant cursor-pointer hover:bg-surface-container hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-sm">menu_book</span><span class="font-label-md text-label-md">All Active Journals (142)</span><span class="material-symbols-outlined text-xs">arrow_drop_down</span></div><div class="hidden xl:flex items-center gap-space-xs bg-surface-container px-space-xs py-0.5 rounded font-code-sm text-code-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span>SQLite Production v1.2</span></div></div><div class="flex-1 max-w-md mx-gutter hidden md:block"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-3 text-outline text-base">search</span><input class="w-full h-8 pl-9 pr-3 bg-surface-container-lowest text-on-surface font-body-sm text-body-sm rounded border border-outline-variant placeholder:text-outline focus:outline-none focus:border-secondary" placeholder="Search Discrepancy ID, Manuscript Ref, DOI..." type="text"/></div></div><div class="flex items-center gap-space-md shrink-0"><button class="inline-flex items-center gap-space-xs bg-primary text-on-primary hover:bg-primary-container px-space-sm py-1.5 rounded font-label-md text-label-md transition-colors shadow-sm" type="button"><span class="material-symbols-outlined text-sm">add</span><span>Log Discrepancy</span></button><div class="relative cursor-pointer p-1 rounded hover:bg-surface-container-high transition-colors text-on-surface-variant"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-0 right-0 w-4 h-4 bg-error text-on-error font-label-sm text-label-sm rounded-full flex items-center justify-center font-bold">4</span></div><div class="h-6 w-px bg-outline-variant"></div><div class="flex items-center gap-space-sm cursor-pointer hover:bg-surface-container px-space-xs py-1 rounded transition-colors"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgZtJ3RB5fAKCbBO8OqISBg6VX4FKMgpBlPXNEWt279xqffyQBOOveGrmKlu74KsXC7aVvhTfmpqLSPPDl0aFYOzF-snaD5y921G24fY09NJb9DWjEE7fpRPNWv0pWIAJ2KmyWfIz4jQKIIB7JZgjCizvc5LbQ5CDsA1s0_2jB0uJB0KL3NpZ4YlGdvo6bSQGKKnhbHPEGdU7AusunrfRwI2pxDiNolj8k1HsBOJmB737Ue5aoqbuHRg"/><div class="hidden xl:flex flex-col text-left leading-tight"><span class="font-label-md text-label-md text-on-surface font-semibold">Dr. Eleanor Vance</span><span class="font-label-sm text-label-sm text-on-surface-variant">Editorial Ops Director</span></div><span class="material-symbols-outlined text-outline text-sm hidden xl:block">expand_more</span></div></div></div></header><aside class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-64 bg-surface-container-lowest border-r border-outline-variant z-40 flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-lg"><div class="px-space-md"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Editorial Operations</span></div><nav class="flex flex-col gap-1 px-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-sm"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="executive-dashboard" href="#"><span class="material-symbols-outlined text-lg">dashboard</span><span>Executive Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="discrepancy-register" href="#"><span class="material-symbols-outlined text-lg">checklist_rtl</span><span>Discrepancy Register</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="discrepancy-detail-workflow" href="#"><span class="material-symbols-outlined text-lg">rule_settings</span><span>Detail &amp; Workflow</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="rework-analytics" href="#"><span class="material-symbols-outlined text-lg">query_stats</span><span>Rework &amp; Analytics</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="admin-taxonomy" href="#"><span class="material-symbols-outlined text-lg">tune</span><span>Admin &amp; Taxonomy</span></a></nav></div><div class="px-space-md py-space-sm border-t border-outline-variant"><div class="flex items-center justify-between text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-sm text-secondary">lock_clock</span><span class="font-label-sm text-label-sm uppercase">Sync Cycle: 4m ago</span></div><span class="font-code-sm text-code-sm text-outline">DB OK</span></div></div></aside><div class="pl-64"><main class="pt-16 min-h-screen bg-surface"><div class="bg-surface-container-low border-b border-outline-variant px-gutter-lg py-space-xs"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><span class="cursor-pointer hover:text-on-surface transition-colors">Editorial Operations</span><span class="material-symbols-outlined text-xs">chevron_right</span><span class="text-on-surface font-semibold">Taylor &amp; Francis Global Tracker</span></div><div class="flex items-center gap-space-sm"><span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>Real-time Telemetry Active</span></div></div></div><div class="w-full px-gutter-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- Top Context Header Area -->
+<div class="bg-surface-container-lowest shadow-sm rounded-xl p-space-lg mb-space-lg">
+<!-- Breadcrumb & Metadata Row -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors inline-flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-sm">checklist_rtl</span>
+<span>Register</span>
+</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="font-code-sm text-code-sm font-semibold text-secondary-container bg-primary px-space-xs py-0.5 rounded">PED-000125</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-secondary">schedule</span>
+<span>Created: 20 Oct 2026, 09:14 UTC</span>
+<span class="mx-1">•</span>
+<span>Reporter: <strong class="text-on-surface">Dr. Marcus Shaw</strong> (Publisher Rep)</span>
+</div>
+</div>
+<!-- Title and Badges -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-code-sm text-code-sm px-2 py-0.5 bg-surface-container text-on-surface-variant rounded font-semibold tracking-wider">REF #PED-000125</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2 py-0.5 bg-secondary-container text-on-secondary-container rounded font-bold uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+            IN PROGRESS
+          </span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2 py-0.5 bg-error-container text-on-error-container rounded font-bold uppercase">
+<span class="material-symbols-outlined text-xs">warning</span>
+            P2 - High Priority
+          </span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container-high text-on-surface-variant rounded">
+            Stage: Post-Acceptance / Ingestion
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight font-bold">
+          Incorrect author affiliation and missing institutional ORCID metadata
+        </h1>
+</div>
+<!-- Action Button Bar -->
+<div class="flex flex-wrap items-center gap-space-xs shrink-0">
+<button class="inline-flex items-center gap-1.5 bg-surface-container text-on-surface hover:bg-surface-container-high px-space-sm py-2 rounded font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-base">person_search</span>
+<span>Reassign</span>
+</button>
+<button class="inline-flex items-center gap-1.5 bg-surface-container text-on-surface hover:bg-surface-container-high px-space-sm py-2 rounded font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-base">timer</span>
+<span>Log Rework</span>
+</button>
+<button class="inline-flex items-center gap-1.5 bg-primary text-on-primary hover:bg-primary-container px-space-sm py-2 rounded font-label-md text-label-md transition-all shadow-sm group" type="button">
+<span class="material-symbols-outlined text-base text-secondary-fixed group-hover:rotate-12 transition-transform">task_alt</span>
+<span>Transition Status (Resolve)</span>
+</button>
+<button class="inline-flex items-center justify-center p-2 bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded transition-colors shadow-sm" title="Export PDF / Audit Dossier" type="button">
+<span class="material-symbols-outlined text-base">picture_as_pdf</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Workflow State Progress Stepper (FR-014 to FR-019) -->
+<div class="bg-surface-container-lowest shadow-sm rounded-xl p-space-lg mb-space-lg">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-lg">schema</span>
+<span class="font-label-lg text-label-lg text-primary">Workflow Lifecycle Phase</span>
+<span class="font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant px-1.5 py-0.5 rounded">FR-014 - FR-019 Engine</span>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Active Assignee: <strong class="text-on-surface">Sarah Chen (QA Lead)</strong></span>
+</div>
+</div>
+<!-- Stepper Graphic Container -->
+<div class="relative w-full overflow-x-auto pb-space-xs">
+<div class="min-w-[760px] flex items-center justify-between relative">
+<!-- Connecting Track Background -->
+<div class="absolute left-6 right-6 top-4 h-0.5 bg-outline-variant -z-0"></div>
+<!-- Completed Track Segment (Steps 1 to 3) -->
+<div class="absolute left-6 w-[40%] top-4 h-0.5 bg-secondary -z-0"></div>
+<!-- Step 1: New (Completed) -->
+<div class="flex flex-col items-center text-center relative z-10 w-28 group cursor-pointer">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-sm mb-1.5">
+<span class="material-symbols-outlined text-base font-bold">check</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">1. New</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">20 Oct, 09:14</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Logged</span>
+</div>
+<!-- Step 2: Triaged (Completed) -->
+<div class="flex flex-col items-center text-center relative z-10 w-28 group cursor-pointer">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-sm mb-1.5">
+<span class="material-symbols-outlined text-base font-bold">check</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">2. Triaged</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">21 Oct, 11:30</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Validated P2</span>
+</div>
+<!-- Step 3: In Progress (Active) -->
+<div class="flex flex-col items-center text-center relative z-10 w-32 group cursor-pointer">
+<div class="w-9 h-9 rounded-full bg-primary text-secondary-fixed flex items-center justify-center shadow-md ring-4 ring-secondary-container/50 mb-1">
+<span class="material-symbols-outlined text-lg animate-spin" style="animation-duration: 4s;">autorenew</span>
+</div>
+<span class="font-label-md text-label-md text-primary font-bold">3. In Progress</span>
+<span class="font-code-sm text-code-sm text-primary-container font-semibold">Sarah Chen</span>
+<span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container px-1 rounded font-bold mt-0.5 uppercase">Current</span>
+</div>
+<!-- Step 4: Resolved (Pending) -->
+<div class="flex flex-col items-center text-center relative z-10 w-28 opacity-65">
+<div class="w-8 h-8 rounded-full bg-surface-container text-outline flex items-center justify-center mb-1.5 border border-outline-variant">
+<span class="font-label-sm text-label-sm">4</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">4. Resolved</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Pending CAPA</span>
+<span class="font-label-sm text-label-sm text-outline">Unverified</span>
+</div>
+<!-- Step 5: Verified (Pending) -->
+<div class="flex flex-col items-center text-center relative z-10 w-28 opacity-65">
+<div class="w-8 h-8 rounded-full bg-surface-container text-outline flex items-center justify-center mb-1.5 border border-outline-variant">
+<span class="font-label-sm text-label-sm">5</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">5. Verified</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Ops Sign-off</span>
+<span class="font-label-sm text-label-sm text-outline">Pending</span>
+</div>
+<!-- Step 6: Closed (Pending) -->
+<div class="flex flex-col items-center text-center relative z-10 w-28 opacity-65">
+<div class="w-8 h-8 rounded-full bg-surface-container text-outline flex items-center justify-center mb-1.5 border border-outline-variant">
+<span class="font-label-sm text-label-sm">6</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">6. Closed</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Archive Record</span>
+<span class="font-label-sm text-label-sm text-outline">Final</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Work Canvas: Two-Column Responsive Grid (65% / 35%) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN (Approx 65% on Desktop - 8 cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg min-w-0">
+<!-- Card 1: Core Discrepancy Information -->
+<section class="bg-surface-container-lowest shadow-sm rounded-xl p-space-lg">
+<div class="flex items-center justify-between pb-space-sm mb-space-md bg-surface-container-low -mx-space-lg -mt-space-lg p-space-md rounded-t-xl">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">dataset</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Core Discrepancy Information</h2>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">FRD Sec 5.1</span>
+</div>
+<!-- Key Manuscript Reference Bento -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md p-space-md bg-surface-container-low rounded-lg mb-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Target Publication Journal</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">auto_stories</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Journal of Applied Bioscience</span>
+<span class="font-code-sm text-code-sm bg-surface-container-highest px-1.5 rounded text-primary">JAB-101</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">ISSN 1744-8328 • Scopus Quartile Q1</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Manuscript Tracking ID &amp; DOI</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">article</span>
+<span class="font-code-sm text-code-sm font-bold text-primary bg-primary-fixed px-2 py-0.5 rounded">DEMO-2026-001</span>
+<a class="inline-flex items-center text-secondary hover:underline font-code-sm text-code-sm gap-0.5" href="#">
+<span>10.1080/jab.2026.001</span>
+<span class="material-symbols-outlined text-xs">open_in_new</span>
+</a>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Accepted MS Type: Original Research</span>
+</div>
+</div>
+<!-- Narrative Blocks: Description & Operational Impact -->
+<div class="space-y-space-md">
+<div>
+<h3 class="font-label-md text-label-md text-on-surface font-semibold uppercase tracking-wider mb-1 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-sm">description</span>
+<span>Discrepancy Description</span>
+</h3>
+<p class="font-body-md text-body-md text-on-surface bg-surface-container-lowest p-space-sm rounded border-l-2 border-secondary">
+              During XML deposition to CrossRef and internal Taylor &amp; Francis production ingestion, the primary co-author Dr. Helena Gomez had her institutional affiliation incorrectly truncated to "Department of Pathology" without the parent university identifier (King's College London). Furthermore, her verified ORCID <code class="font-code-sm text-code-sm bg-surface-container px-1 py-0.5 rounded">0000-0002-1825-0097</code> was purged during author schema translation.
+            </p>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface font-semibold uppercase tracking-wider mb-1 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-error text-sm">report_problem</span>
+<span>Production &amp; Integrity Impact</span>
+</h3>
+<p class="font-body-md text-body-md text-on-surface bg-error-container/20 p-space-sm rounded text-on-surface">
+              Article pre-print galley proofs generated for final author review contain corrupted affiliations. Distribution to indexation bodies (PubMed Central, CrossRef, WoS) is halted until author metadata schema can be successfully synchronized and re-validated.
+            </p>
+</div>
+</div>
+<!-- Evidence & File Attachments -->
+<div class="mt-space-lg pt-space-md bg-surface-container-low/50 -mx-space-lg -mb-space-lg p-space-lg rounded-b-xl">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-base">attachment</span>
+<span>Attached Evidence Artifacts (2 Files)</span>
+</span>
+<button class="font-label-sm text-label-sm text-secondary hover:text-on-secondary-container inline-flex items-center gap-1 font-semibold" type="button">
+<span class="material-symbols-outlined text-xs">upload_file</span>
+<span>Attach Supplemental Data</span>
+</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<!-- File 1 -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-lowest rounded shadow-xs hover:shadow-sm transition-shadow">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-base">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate font-medium">author_submission_proof.pdf</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">1.4 MB • Raw Author Proof</span>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant" title="Preview Artifact" type="button">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-secondary" title="Download Source" type="button">
+<span class="material-symbols-outlined text-base">download</span>
+</button>
+</div>
+</div>
+<!-- File 2 -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-lowest rounded shadow-xs hover:shadow-sm transition-shadow">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-base">data_object</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate font-medium">metadata_discrepancy_diff.json</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">42 KB • CrossRef XML Diff</span>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant" title="Preview JSON" type="button">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-secondary" title="Download Diff" type="button">
+<span class="material-symbols-outlined text-base">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Card 2: Root Cause Investigation Section (FR-010 to FR-013) -->
+<section class="bg-surface-container-lowest shadow-sm rounded-xl p-space-lg">
+<div class="flex items-center justify-between pb-space-sm mb-space-md bg-surface-container-low -mx-space-lg -mt-space-lg p-space-md rounded-t-xl">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">psychology</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Root Cause Investigation &amp; Taxonomy</h2>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">FR-010 - FR-013</span>
+</div>
+<!-- Taxonomy Hierarchy Badge Flow -->
+<div class="mb-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold tracking-wider block mb-1">Assigned Taxonomy Vector</span>
+<div class="inline-flex flex-wrap items-center gap-1.5 p-space-xs bg-surface-container-low rounded">
+<span class="font-label-md text-label-md bg-primary text-on-primary px-2 py-0.5 rounded font-semibold">Data Quality</span>
+<span class="material-symbols-outlined text-outline-variant text-xs">arrow_forward</span>
+<span class="font-label-md text-label-md bg-surface-container-high text-on-surface px-2 py-0.5 rounded font-medium">Author Metadata Ingestion</span>
+<span class="material-symbols-outlined text-outline-variant text-xs">arrow_forward</span>
+<span class="font-label-md text-label-md bg-tertiary-fixed text-on-tertiary-fixed-variant px-2 py-0.5 rounded font-semibold">Sync Failure (Regex Ingestion Drift)</span>
+</div>
+</div>
+<!-- Visual Root Cause Flow / Mini Architecture Diagram (Inline SVG under 2KB) -->
+<div class="bg-surface-container-low rounded-lg p-space-md mb-space-md flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase font-semibold text-on-surface-variant">Ingestion Pipeline Failure Mapping</span>
+<span class="font-code-sm text-code-sm text-secondary">Break at Ingestion Parser v4.2</span>
+</div>
+<div class="w-full h-16 flex items-center justify-center">
+<svg class="w-full h-full max-w-xl" fill="none" viewbox="0 0 520 60" xmlns="http://www.w3.org/2000/svg">
+<rect class="fill-surface-container-high" height="40" rx="4" width="110" x="10" y="10"></rect>
+<text class="fill-on-surface font-label-sm text-[11px] font-semibold" text-anchor="middle" x="65" y="34">Author Submission</text>
+<path class="text-secondary" d="M125 30H155" stroke="currentColor" stroke-width="2"></path>
+<polygon class="text-secondary" fill="currentColor" points="155,27 163,30 155,33"></polygon>
+<rect class="fill-surface-container-high" height="40" rx="4" width="110" x="165" y="10"></rect>
+<text class="fill-on-surface font-label-sm text-[11px] font-semibold" text-anchor="middle" x="220" y="34">Metadata Ingest</text>
+<path class="text-error" d="M280 30H310" stroke="currentColor" stroke-dasharray="3 3" stroke-width="2"></path>
+<circle class="text-error" cx="310" cy="30" fill="currentColor" r="4"></circle>
+<rect class="fill-error-container" height="40" rx="4" width="110" x="320" y="10"></rect>
+<text class="fill-on-error-container font-label-sm text-[10px] font-bold" text-anchor="middle" x="375" y="28">PARSER REGEX</text>
+<text class="fill-on-error-container font-code-sm text-[9px]" text-anchor="middle" x="375" y="42">DROPPED ORCID</text>
+<path class="text-outline-variant" d="M435 30H465" stroke="currentColor" stroke-width="2"></path>
+<polygon class="text-outline-variant" fill="currentColor" points="465,27 473,30 465,33"></polygon>
+<rect class="fill-surface-container" height="40" rx="4" width="40" x="475" y="10"></rect>
+<text class="fill-outline font-label-sm text-[10px]" text-anchor="middle" x="495" y="34">PMC</text>
+</svg>
+</div>
+</div>
+<!-- Investigation Notes Log -->
+<div class="space-y-space-sm mb-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold tracking-wider">Investigation Findings Log</span>
+<div class="p-space-sm bg-surface-container-low rounded-lg space-y-1">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="font-semibold text-on-surface">Sarah Chen (QA Senior Analyst)</span>
+<span class="font-code-sm text-code-sm">21 Oct 2026, 14:22 UTC</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+              Verified submission source payload: Raw XML from Manuscript Central contains full affiliation and ORCID string. The issue occurred during JSON normalization in the Publisher Hub parser (Build 2026.10-r2) where regex pattern <code class="font-code-sm text-code-sm bg-surface-container px-1 rounded">/inst_[a-z0-9]+/i</code> dropped commas in nested department tags.
+            </p>
+</div>
+</div>
+<!-- CAPA Box -->
+<div class="p-space-md bg-secondary-container/20 rounded-lg">
+<div class="flex items-center gap-space-xs mb-space-xs text-secondary">
+<span class="material-symbols-outlined text-lg">verified_user</span>
+<span class="font-label-md text-label-md font-bold uppercase tracking-wide">Corrective &amp; Preventive Action (CAPA Tracking)</span>
+<span class="font-label-sm text-label-sm bg-secondary text-on-secondary px-1.5 py-0.2 rounded font-bold ml-auto">FR-012</span>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm bg-surface-container-lowest p-space-sm rounded">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-base mt-0.5">task</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-semibold">
+                  Update automated affiliation validation regex in submission ingestion pipeline by Nov 5
+                </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Owner: Engineering Core Services (Pipeline Team) • Ticket DEVOPS-8841</span>
+</div>
+</div>
+<div class="shrink-0 flex items-center gap-2">
+<span class="font-label-sm text-label-sm bg-surface-container-high px-2 py-0.5 rounded text-on-surface-variant font-medium">Due in 15 days</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">SCHEDULED</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Card 3: Rework Effort Log Table (FR-020 to FR-025) -->
+<section class="bg-surface-container-lowest shadow-sm rounded-xl p-space-lg">
+<div class="flex flex-wrap items-center justify-between pb-space-sm mb-space-md bg-surface-container-low -mx-space-lg -mt-space-lg p-space-md rounded-t-xl gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">work_history</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Rework Effort Accounting</h2>
+<span class="font-label-sm text-label-sm bg-primary text-secondary-fixed px-2 py-0.5 rounded font-bold ml-2">FR-020 - FR-025</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="bg-surface-container-lowest px-space-sm py-1 rounded shadow-xs flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cumulative Rework:</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">4.5 Hours</span>
+</div>
+<button class="inline-flex items-center gap-1 bg-primary text-on-primary hover:bg-primary-container px-space-sm py-1.5 rounded font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-sm">add</span>
+<span>Log Rework Entry</span>
+</button>
+</div>
+</div>
+<!-- Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-2.5 px-space-sm rounded-l">Contributor</th>
+<th class="py-2.5 px-space-sm">Role</th>
+<th class="py-2.5 px-space-sm">Date Logged</th>
+<th class="py-2.5 px-space-sm">Task Description</th>
+<th class="py-2.5 px-space-sm text-right rounded-r">Effort</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-space-sm font-label-md text-label-md text-on-surface font-semibold flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold font-label-sm text-label-sm">
+                    SC
+                  </div>
+<span>Sarah Chen</span>
+</td>
+<td class="py-3 px-space-sm font-body-sm text-body-sm text-on-surface-variant">Senior QA Analyst</td>
+<td class="py-3 px-space-sm font-code-sm text-code-sm text-on-surface">21 Oct 2026</td>
+<td class="py-3 px-space-sm font-body-md text-body-md text-on-surface">
+                  Re-verifying institutional database records, author email validation against ORCID API, and staging dry-run diff patch.
+                </td>
+<td class="py-3 px-space-sm font-code-sm text-code-sm text-primary font-bold text-right whitespace-nowrap">
+                  2.5 hrs
+                </td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-space-sm font-label-md text-label-md text-on-surface font-semibold flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-surface-container-high text-primary flex items-center justify-center font-bold font-label-sm text-label-sm">
+                    MS
+                  </div>
+<span>Dr. Marcus Shaw</span>
+</td>
+<td class="py-3 px-space-sm font-body-sm text-body-sm text-on-surface-variant">Publisher Rep</td>
+<td class="py-3 px-space-sm font-code-sm text-code-sm text-on-surface">20 Oct 2026</td>
+<td class="py-3 px-space-sm font-body-md text-body-md text-on-surface">
+                  Affiliation sync patch generation, author email confirmation, and initial ticket triage.
+                </td>
+<td class="py-3 px-space-sm font-code-sm text-code-sm text-primary font-bold text-right whitespace-nowrap">
+                  2.0 hrs
+                </td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Rework Breakdown Spark Indicator -->
+<div class="mt-space-md pt-space-sm flex flex-wrap items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-md">
+<span class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span>QA &amp; Verification (55%)</span>
+</span>
+<span class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span>Publisher Remediation (45%)</span>
+</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Rework Cost Rate Applied: Standard Editorial Tier-2</span>
+</div>
+</section>
+</div>
+<!-- RIGHT COLUMN (Approx 35% on Desktop - 4 cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg min-w-0">
+<!-- Card: Workflow & Attribution (SLA Timer & Assignment) -->
+<section class="bg-surface-container-lowest shadow-sm rounded-xl p-space-lg">
+<div class="flex items-center justify-between pb-space-sm mb-space-md bg-surface-container-low -mx-space-lg -mt-space-lg p-space-md rounded-t-xl">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">badge</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Attribution &amp; SLAs</h2>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-base">info</span>
+</div>
+<!-- SLA Countdown Visual Widget -->
+<div class="bg-primary text-on-primary rounded-lg p-space-md mb-space-md relative overflow-hidden shadow-sm">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider font-semibold">Resolution SLA Target</span>
+<span class="font-label-sm text-label-sm bg-secondary text-on-secondary px-1.5 py-0.2 rounded font-bold">48H TARGET</span>
+</div>
+<div class="flex items-baseline gap-2 mb-2">
+<span class="font-display-lg text-display-lg text-on-primary font-bold">18h 46m</span>
+<span class="font-label-md text-label-md text-secondary-fixed">remaining</span>
+</div>
+<!-- Progress bar -->
+<div class="w-full bg-primary-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full rounded-full" style="width: 61%;"></div>
+</div>
+<div class="flex items-center justify-between mt-1 text-secondary-fixed font-code-sm text-code-sm">
+<span>29.2h elapsed</span>
+<span>Breach at: 23 Oct 09:14 UTC</span>
+</div>
+</div>
+<!-- Assignment Profiles List -->
+<div class="space-y-space-md">
+<!-- Assignee -->
+<div class="flex items-start gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover shrink-0 shadow-xs" data-alt="Corporate headshot of an Asian woman in professional business attire, sharp focus, neutral studio lighting, cool tones matching scholarly publication editorial team" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUgvMmmcA8x1zb8Evca8yK-sz0O7vq_ZtyRwwTpVQ2Zp9wgATNbenLlhqPQw6T0c7qK1InONrIWOUF1yTzO9QXACsknfQFm0jbBRuXFGjWU2qbdycc0bLAv8RXqIQUSf3A7Ho40lHS_4OkgrqWp0iHZ0J9ZYPvVkj48Ih7m5lcsjemeVZeRsgjz4k8f4uglCRTpAFoDH2WKmr3R5qVCQffMxss1HFZV4mDqKt__tWbDNPs3p_LFAio1A"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold">Assigned Investigator</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Sarah Chen</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Senior QA Operations Lead • Oxford Hub</span>
+</div>
+</div>
+<!-- Affected Editor (Rule RULE-010 Disclaimer) -->
+<div class="p-space-sm bg-surface-container-low rounded-lg space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold">Handling Editor</span>
+<span class="font-code-sm text-code-sm bg-surface-container px-1 rounded text-primary font-bold">RULE-010</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base">school</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Prof. Alistair Finch</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+<strong>Association only:</strong> Discrepancy is systemic to ingest engine; handling editor carries no performance fault under Rule RULE-010.
+            </p>
+</div>
+<!-- Reporter -->
+<div class="flex items-center justify-between text-on-surface-variant pt-space-xs font-label-md text-label-md">
+<span class="text-on-surface-variant">Logged by:</span>
+<span class="font-semibold text-on-surface">Dr. Marcus Shaw (Publisher Ops)</span>
+</div>
+</div>
+</section>
+<!-- Card: Audit Trail & Immutable Activity History (FR-050 to FR-053) -->
+<section class="bg-surface-container-lowest shadow-sm rounded-xl p-space-lg">
+<div class="flex items-center justify-between pb-space-sm mb-space-md bg-surface-container-low -mx-space-lg -mt-space-lg p-space-md rounded-t-xl">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">receipt_long</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Audit Trail &amp; History</h2>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">FR-050 - FR-053</span>
+</div>
+<div class="text-on-surface-variant font-label-sm text-label-sm mb-space-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-sm">enhanced_encryption</span>
+<span>Immutable Ledger • Read-Only Security Hash</span>
+</div>
+<!-- Vertical Timeline Stream -->
+<div class="relative pl-6 space-y-space-md before:content-[''] before:absolute before:left-2.5 before:top-2 before:bottom-2 before:w-0.5 before:bg-outline-variant">
+<!-- Event 1 -->
+<div class="relative group">
+<div class="absolute -left-[19px] top-1 w-3 h-3 rounded-full bg-secondary ring-4 ring-surface-container-lowest"></div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Status Transitioned</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">21 Oct, 13:45</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+                Status modified from <code class="font-code-sm text-code-sm bg-surface-container px-1 rounded text-outline">TRIAGED</code> to <code class="font-code-sm text-code-sm bg-secondary-container px-1 rounded text-on-secondary-container font-semibold">IN_PROGRESS</code>
+</p>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Actor: Sarah Chen (Assignee Accepted)</span>
+</div>
+</div>
+<!-- Event 2 -->
+<div class="relative group">
+<div class="absolute -left-[19px] top-1 w-3 h-3 rounded-full bg-primary ring-4 ring-surface-container-lowest"></div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Root Cause Categorized</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">21 Oct, 12:10</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+                Taxonomy linked to <span class="font-code-sm text-code-sm bg-surface-container-high px-1 rounded text-primary">Data Quality &gt; Author Ingest</span>
+</p>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Actor: Sarah Chen</span>
+</div>
+</div>
+<!-- Event 3 -->
+<div class="relative group">
+<div class="absolute -left-[19px] top-1 w-3 h-3 rounded-full bg-outline ring-4 ring-surface-container-lowest"></div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Rework Effort Logged</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">20 Oct, 17:00</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+                Marcus Shaw added 2.0 hours (Affiliation sync patch).
+              </p>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Actor: Dr. Marcus Shaw</span>
+</div>
+</div>
+<!-- Event 4 -->
+<div class="relative group">
+<div class="absolute -left-[19px] top-1 w-3 h-3 rounded-full bg-outline-variant ring-4 ring-surface-container-lowest"></div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Discrepancy Registered</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">20 Oct, 09:14</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+                Ticket initiated with Priority P2 for Journal JAB-101 (DEMO-2026-001).
+              </p>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Actor: Dr. Marcus Shaw (Automated Ingest)</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs text-center">
+<button class="font-label-sm text-label-sm text-secondary hover:text-on-secondary-container hover:underline inline-flex items-center gap-1 font-semibold" type="button">
+<span>View Complete Immutable Hash Log (11 Events)</span>
+<span class="material-symbols-outlined text-xs">open_in_new</span>
+</button>
+</div>
+</section>
+<!-- Quick Operations Drawer Card / System Metadata -->
+<section class="bg-surface-container-low/70 rounded-xl p-space-md text-on-surface-variant space-y-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span>Schema Sync Status:</span>
+<span class="text-secondary font-bold font-code-sm text-code-sm">SYNC_PENDING_PATCH</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span>CrossRef Batch Token:</span>
+<span class="font-code-sm text-code-sm text-on-surface">CR-992140-UK</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span>Editorial Governance:</span>
+<span class="font-code-sm text-code-sm text-on-surface">ISO-9001 / COPE Aligned</span>
+</div>
+</section>
+</div>
+</div>
+<!-- Interactive Modal / Drawer Trigger Script for Client UX -->
+<script>
+    // Micro-interaction behaviors for demo clarity
+    document.querySelectorAll('button').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        if(this.textContent.includes('Transition Status')) {
+          const originalText = this.innerHTML;
+          this.innerHTML = '<span class="material-symbols-outlined text-base animate-spin">refresh</span><span>Verifying Gates...</span>';
+          setTimeout(() => {
+            alert('Workflow Gate Evaluation: All automated ingest tests verified. Ready for Resolution Sign-off under FR-017.');
+            this.innerHTML = originalText;
+          }, 600);
+        }
+      });
+    });
+  </script>
+</div></div></main></div></body></html>
