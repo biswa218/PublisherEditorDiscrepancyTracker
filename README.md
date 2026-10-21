@@ -151,6 +151,18 @@ docker run -d \
 
 ---
 
+## 📚 Handover Documentation & Client Runbook
+
+Comprehensive operational and architectural documentation has been prepared in the [`docs/`](./docs/) directory for the client team:
+
+- **[Operational Runbook (`docs/RUNBOOK.md`)](./docs/RUNBOOK.md)**: Production deployment, container lifecycle, routine monitoring, backup/restore, hot WAL maintenance, and troubleshooting incident playbooks.
+- **[Technical Architecture & Design (`docs/ARCHITECTURE_AND_DESIGN.md`)](./docs/ARCHITECTURE_AND_DESIGN.md)**: System design, relational ERD (13 tables), workflow state machine, and Academic Precision design specs.
+- **[REST API Specification (`docs/API_SPECIFICATION.md`)](./docs/API_SPECIFICATION.md)**: Complete endpoint reference for `/api/v1` with JSON request/response models.
+- **[QA & Verification Guide (`docs/TESTING_AND_VERIFICATION_GUIDE.md`)](./docs/TESTING_AND_VERIFICATION_GUIDE.md)**: Playwright test execution procedures, scenario matrix, and CI/CD pipeline examples.
+- **[Client Handover Notes (`docs/CLIENT_HANDOVER_NOTES.md`)](./docs/CLIENT_HANDOVER_NOTES.md)**: Executive delivery summary, test user personas, architectural guarantees, and next steps.
+
+---
+
 ## 📋 Requirements Traceability
 
 Full mapping of Business Objectives (BR-001..009), Functional Requirements (FR-001..062), Business Rules (RULE-001..012), and User Stories (US-001..014) is documented in [`REQUIREMENTS_TRACEABILITY.md`](./REQUIREMENTS_TRACEABILITY.md).

@@ -73,3 +73,4 @@ switch ($Action) {
         Write-Host "[SUCCESS] Restart complete." -ForegroundColor Green
     }
 }
+
