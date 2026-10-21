@@ -1,0 +1,35 @@
+services:
+  discrepancy-tracker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: tandf/publisher-editor-discrepancy-tracker:latest
+    container_name: discrepancy-tracker-app
+    restart: unless-stopped
+    ports:
+      - "${PORT:-5000}:5000"
+    environment:
+      - NODE_ENV=production
+      - PORT=5000
+      - DATA_DIR=/app/backend/data
+      - DB_PATH=/app/backend/data/discrepancy_tracker.db
+      - UPLOADS_DIR=/app/backend/uploads
+    volumes:
+      # Persistent storage for SQLite WAL database file
+      - discrepancy_data:/app/backend/data
+      # Persistent storage for audit attachment evidence files
+      - discrepancy_uploads:/app/backend/uploads
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:5000/health || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+volumes:
+  discrepancy_data:
+    driver: local
+    name: discrepancy_tracker_sqlite_data
+  discrepancy_uploads:
+    driver: local
+    name: discrepancy_tracker_uploads_data

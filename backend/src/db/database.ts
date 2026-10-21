@@ -6,12 +6,12 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const DATA_DIR = path.resolve(__dirname, '../../data');
+const DATA_DIR = process.env.DATA_DIR || path.resolve(__dirname, '../../data');
 if (!fs.existsSync(DATA_DIR)) {
   fs.mkdirSync(DATA_DIR, { recursive: true });
 }
 
-const DB_PATH = path.join(DATA_DIR, 'discrepancy_tracker.db');
+const DB_PATH = process.env.DB_PATH || path.join(DATA_DIR, 'discrepancy_tracker.db');
 
 export class AppDatabase {
   private static instance: DatabaseSync | null = null;
@@ -25,8 +25,17 @@ export class AppDatabase {
       AppDatabase.instance.exec('PRAGMA busy_timeout = 5000;');
 
       // Auto-initialize schema if needed
-      const schemaPath = path.resolve(__dirname, 'schema.sql');
-      if (fs.existsSync(schemaPath)) {
+      const candidatePaths = [
+        path.resolve(__dirname, 'schema.sql'),
+        path.resolve(__dirname, '../../src/db/schema.sql'),
+        path.resolve(__dirname, '../src/db/schema.sql'),
+        path.resolve(process.cwd(), 'src/db/schema.sql'),
+        path.resolve(process.cwd(), 'dist/db/schema.sql'),
+        path.resolve(process.cwd(), 'backend/src/db/schema.sql'),
+        path.resolve(process.cwd(), 'backend/dist/db/schema.sql')
+      ];
+      const schemaPath = candidatePaths.find(p => fs.existsSync(p));
+      if (schemaPath) {
         const schemaSql = fs.readFileSync(schemaPath, 'utf8');
         AppDatabase.instance.exec(schemaSql);
       }

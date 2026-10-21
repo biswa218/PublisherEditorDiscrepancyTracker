@@ -92,6 +92,65 @@ All 10 scenarios test:
 
 ---
 
+## 🐳 Docker Deployment
+
+The application is fully containerized as a lightweight, production-ready Alpine Linux image running Node.js 24 with native SQLite WAL support.
+
+### Option A: Using Docker Compose (Recommended)
+
+1. Start the container in detached mode with persistent volume storage:
+   ```bash
+   docker compose up -d --build
+   ```
+
+2. Access the application:
+   - **Web UI & API:** [http://localhost:5000](http://localhost:5000)
+   - **Healthcheck:** [http://localhost:5000/health](http://localhost:5000/health)
+
+3. Stop the container:
+   ```bash
+   docker compose down
+   ```
+
+### Option B: Using the PowerShell Helper Script (Windows)
+
+```powershell
+# Build and run the container
+.\docker-run.ps1
+
+# View live container logs
+.\docker-run.ps1 -Action logs
+
+# Check container status
+.\docker-run.ps1 -Action status
+
+# Stop the container
+.\docker-run.ps1 -Action down
+```
+
+### Option C: Using Docker CLI directly
+
+```bash
+# Build the Docker image
+docker build -t tandf/publisher-editor-discrepancy-tracker:latest .
+
+# Run the container with named volumes for database and attachment persistence
+docker run -d \
+  --name discrepancy-tracker-app \
+  -p 5000:5000 \
+  -v discrepancy_tracker_sqlite_data:/app/backend/data \
+  -v discrepancy_tracker_uploads_data:/app/backend/uploads \
+  --restart unless-stopped \
+  tandf/publisher-editor-discrepancy-tracker:latest
+```
+
+### 💾 Container Persistence & Architecture Notes
+- **Zero-Config Auto-Seed:** When the container boots for the first time with an empty database volume, it automatically runs database migrations (`schema.sql`) and seeds baseline taxonomy, users, and demonstration discrepancies.
+- **SQLite WAL Mode:** SQLite operates in Write-Ahead Logging (`WAL`) mode with foreign key constraints enforced. SQLite requires local volume mounting (named Docker volumes or direct host filesystem mounts; avoid network CIFS/NFS mounts for SQLite locking integrity).
+- **Single Container Monolith:** Express backend serves both the `/api/v1` REST APIs and the compiled React TypeScript SPA static assets from port 5000.
+
+---
+
 ## 📋 Requirements Traceability
 
 Full mapping of Business Objectives (BR-001..009), Functional Requirements (FR-001..062), Business Rules (RULE-001..012), and User Stories (US-001..014) is documented in [`REQUIREMENTS_TRACEABILITY.md`](./REQUIREMENTS_TRACEABILITY.md).
@@ -101,3 +160,4 @@ Full mapping of Business Objectives (BR-001..009), Functional Requirements (FR-0
 ## 📄 License
 
 Proprietary — Taylor & Francis Group. All rights reserved.
+

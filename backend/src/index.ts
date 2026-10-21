@@ -4,7 +4,8 @@ import path from 'node:path';
 import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
-import { getDb } from './db/database.js';
+import { getDb, get } from './db/database.js';
+import { seedData } from './db/seed.js';
 import { discrepanciesRouter } from './routes/discrepancies.js';
 import { analyticsRouter } from './routes/analytics.js';
 import { journalsRouter } from './routes/journals.js';
@@ -26,7 +27,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Uploads directory for evidence attachments
-const UPLOADS_DIR = path.resolve(__dirname, '../uploads');
+const UPLOADS_DIR = process.env.UPLOADS_DIR || path.resolve(__dirname, '../uploads');
 if (!fs.existsSync(UPLOADS_DIR)) {
   fs.mkdirSync(UPLOADS_DIR, { recursive: true });
 }
@@ -67,6 +68,19 @@ if (fs.existsSync(FRONTEND_DIST)) {
 try {
   getDb();
   console.log('SQLite database connection initialized.');
+
+  // Auto-seed baseline taxonomy and demo records on fresh container boot if database is empty
+  try {
+    const userCount = get<{ count: number }>('SELECT COUNT(*) as count FROM app_users');
+    if (!userCount || userCount.count === 0) {
+      console.log('Empty database detected. Seeding initial baseline datasets and taxonomy...');
+      seedData();
+      console.log('Database seeding complete.');
+    }
+  } catch (seedErr) {
+    console.warn('Auto-seed check/execution notice:', seedErr);
+  }
+
   app.listen(PORT, () => {
     console.log(`Discrepancy Tracker Backend running on http://localhost:${PORT}`);
   });
